@@ -1,16 +1,20 @@
 ﻿<Properties StartupConfiguration="{F377C16F-EA66-6563-6745-34990E86D0B1}|">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CreatingElementsLogic.cs">
     <Files>
-      <File FileName="Assets/Scripts/Atom.cs" Line="62" Column="38" />
-      <File FileName="Assets/Scripts/CreatingElementsLogic.cs" Line="287" Column="27" />
+      <File FileName="Assets/Scripts/Atom.cs" />
+      <File FileName="Assets/Scripts/CreatingElementsLogic.cs" Line="317" Column="21" />
       <File FileName="Assets/Scripts/InstantiateAtom.cs" />
-      <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" Line="22" Column="9" />
+      <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ChemistryApp" expanded="True">
+          <Node name="ChemistryApp">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Periodic Table Scripts" expanded="True" />
@@ -19,15 +23,8 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7c7694f3-95c2-4347-9719-9e8c677ef75b" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ee57d1dc-f374-488b-8dd2-811f2a5a08cf" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

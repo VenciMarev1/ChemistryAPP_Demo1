@@ -325,3 +325,18 @@ public class CreatingElementsLogic : MonoBehaviour
 
 
 // last edited: 0:30pm 28.01.2023.
+// last edited: 22:22 10.02.2023.
+
+
+//Idei
+/* Moje s drop down menu da napravq da se vyvejda vseki element
+ * ot tam v logikata gi razmenqm ako moje. (mai ne e dobra idea zashtoto shte trqbva rychno vseki element da pisha i na moje primerno da ne obrazuvat veshtestva.)
+ * 
+ * wdyif geqfju yjouegiuoetrynfua sdcjkcxdsalkhcdsafcdsacdk
+ * 
+ * Ne go pravi mnogo slojno!
+ * 
+ * 
+ * 
+ * 
+ */
