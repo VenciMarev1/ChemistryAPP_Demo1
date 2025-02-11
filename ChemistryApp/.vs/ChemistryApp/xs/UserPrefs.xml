@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{F377C16F-EA66-6563-6745-34990E86D0B1}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a68e8ac4-63b3-4a95-8c9e-78caa5469ecc" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CreatingElementsLogic.cs">
     <Files>
       <File FileName="Assets/Scripts/Atom.cs" />
-      <File FileName="Assets/Scripts/CreatingElementsLogic.cs" Line="317" Column="21" />
+      <File FileName="Assets/Scripts/CreatingElementsLogic.cs" Line="270" Column="43" />
       <File FileName="Assets/Scripts/InstantiateAtom.cs" />
       <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" />
     </Files>
@@ -18,6 +19,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Periodic Table Scripts" expanded="True" />
+                <Node name="CreatingElementsLogic.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -25,6 +27,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ee57d1dc-f374-488b-8dd2-811f2a5a08cf" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
