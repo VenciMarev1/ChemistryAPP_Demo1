@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1701, y: -675}
+  m_AnchoredPosition: {x: 1078, y: -675}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &227260817
@@ -207,7 +207,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1130892034}
         m_TargetAssemblyTypeName: InstantiateAtom, Assembly-CSharp
-        m_MethodName: Check
+        m_MethodName: SolveChemEqation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -624,6 +624,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4878940350665070620, guid: 01dff167e0f4f46f59f61ada8f935787, type: 3}
   m_PrefabInstance: {fileID: 537337180}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &537337182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3663589647451170785, guid: 01dff167e0f4f46f59f61ada8f935787, type: 3}
+  m_PrefabInstance: {fileID: 537337180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &619687134 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3977495985815435582, guid: c3fa9ff3303ac4ab68b465756ed0be55, type: 3}
@@ -1943,6 +1954,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1998302469}
     m_Modifications:
+    - target: {fileID: 3733050001514395727, guid: 684362e5990dd42de96cceabe72d24f0, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[5].m_Text
+      value: SO<sub>4</sub>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733050001514395727, guid: 684362e5990dd42de96cceabe72d24f0, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[6].m_Text
+      value: SO<sub>3</sub>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733050001514395727, guid: 684362e5990dd42de96cceabe72d24f0, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[7].m_Text
+      value: NO<sub>3</sub>
+      objectReference: {fileID: 0}
     - target: {fileID: 5588810021691759399, guid: 684362e5990dd42de96cceabe72d24f0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2124,6 +2147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metals
       objectReference: {fileID: 0}
+    - target: {fileID: 6587710035256350648, guid: c3fa9ff3303ac4ab68b465756ed0be55, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[0].m_Image
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2194,6 +2221,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 252075708}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 537337182}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: optionMetal
       value: 
       objectReference: {fileID: 619687135}
@@ -2201,6 +2232,42 @@ PrefabInstance:
       propertyPath: optionNonMetal
       value: 
       objectReference: {fileID: 970517127}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.data[0]
+      value: 
+      objectReference: {fileID: 4411559597765776328, guid: 162df7807846e43bf98fec64741c317e, type: 3}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.data[1]
+      value: 
+      objectReference: {fileID: 4411559597765776328, guid: d345c5578ce5340c48bb2c81e7611379, type: 3}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.data[2]
+      value: 
+      objectReference: {fileID: 4411559597765776328, guid: 3639a4283a631421bab0cc8321ee3374, type: 3}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.data[3]
+      value: 
+      objectReference: {fileID: 4411559597765776328, guid: 6369ed6246b334b50bf110f2b1a1333e, type: 3}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.data[4]
+      value: 
+      objectReference: {fileID: 4411559597765776328, guid: b51efda588cda4d1b9550cb8e7d50974, type: 3}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.data[5]
+      value: 
+      objectReference: {fileID: 4411559597765776328, guid: 021e2546580064ed48d293cb79fb7351, type: 3}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.data[6]
+      value: 
+      objectReference: {fileID: 4411559597765776328, guid: a58ce642b584340c89c8462217087391, type: 3}
+    - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
+      propertyPath: NonMetals.Array.data[7]
+      value: 
+      objectReference: {fileID: 4411559597765776328, guid: 387c0fb1854544a288d1b1233b7bc8bc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
