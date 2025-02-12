@@ -9,10 +9,12 @@ public class Element : MonoBehaviour
     public GameObject Element_Table;
     public Image menu;
     bool mousePressed = false;
+
+    Vector3 currentScale = new Vector3();
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentScale = Element_Table.transform.localScale;
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class Element : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Element_Table.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        Element_Table.transform.localScale = new Vector3(1f, 1f, 1f);
         if(mousePressed)
         {
             menu.rectTransform.anchoredPosition = new Vector3(995, 3, 0);
@@ -33,7 +35,7 @@ public class Element : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        Element_Table.transform.localScale = new Vector3(1, 1, 1);
+        Element_Table.transform.localScale = currentScale;
 
     }
 
