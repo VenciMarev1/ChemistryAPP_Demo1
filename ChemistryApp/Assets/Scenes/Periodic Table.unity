@@ -394,11 +394,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 855374161180873271, guid: d994f074b547040d8807e97cd258ccef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.316944
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 855374161180873271, guid: d994f074b547040d8807e97cd258ccef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0273736
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 855374161180873271, guid: d994f074b547040d8807e97cd258ccef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -593,6 +593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Element
       objectReference: {fileID: 0}
+    - target: {fileID: 2292657837314058048, guid: d994f074b547040d8807e97cd258ccef, type: 3}
+      propertyPath: m_text
+      value: abvg
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -669,7 +673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2826, y: 3}
+  m_AnchoredPosition: {x: 2773, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1984956012
