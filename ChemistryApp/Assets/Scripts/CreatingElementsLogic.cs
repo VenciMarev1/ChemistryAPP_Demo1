@@ -278,7 +278,7 @@ public class CreatingElementsLogic : MonoBehaviour
         //:(
     }
 
-    //Zadyljitelno da se smenqt tezi listove sys elementite v ui-a.
+    //Zadyljitelno da se smenqt tezi listove sys elementite v ui-a. - Update: Ne si poznal, listovete da si stoqt.
 
 
     private void SubmitRedox(string arg0)

@@ -121,10 +121,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AtomGO: {fileID: 4411559597765776328}
   Name: O
+  NameForPresentation: O
   Electrons: -2
   Text_ForSelected: {fileID: 0}
   NameCreatedElement: {fileID: 0}
   crel: {fileID: 0}
+  HasIndex: 0
 --- !u!54 &7702535008117826439
 Rigidbody:
   m_ObjectHideFlags: 0

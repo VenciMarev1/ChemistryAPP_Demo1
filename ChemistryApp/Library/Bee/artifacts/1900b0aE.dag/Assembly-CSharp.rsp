@@ -358,6 +358,7 @@
 "Assets/Scripts/InstantiateAtom.cs"
 "Assets/Scripts/MoveObjects.cs"
 "Assets/Scripts/Periodic Table Scripts/Element.cs"
+"Assets/Scripts/Redox script.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

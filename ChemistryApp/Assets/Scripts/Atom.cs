@@ -8,6 +8,7 @@ public class Atom : MonoBehaviour
 {
     public GameObject AtomGO;
     public string Name;
+    public string NameForPresentation;
     public int Electrons;
     public TMP_Text Text_ForSelected;
 

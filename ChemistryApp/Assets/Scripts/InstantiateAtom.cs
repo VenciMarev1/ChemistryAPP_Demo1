@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Reflection;
+using System.Xml.Linq;
 
 public class InstantiateAtom : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class InstantiateAtom : MonoBehaviour
         Instantiate(Metals[index],new Vector3(-3, Metals[index].transform.position.y, Metals[index].transform.position.z),Quaternion.identity);
     }
 
-
+    #region
     //Tva nai veroqtno shte trqbva da e v otdelen cs fail.
 
     public void SolveChemEqation()
@@ -140,11 +141,12 @@ public class InstantiateAtom : MonoBehaviour
             }
         }
 
-        DisplayElement(AtomDict);
+
+        DisplayElement(AtomDict, atomScript);
 
     }
 
-    private void DisplayElement(Dictionary<string, Dictionary<int, int>> AtomDict)
+    private void DisplayElement(Dictionary<string, Dictionary<int, int>> AtomDict, List<Atom> pNames)
     {
         List<string> ElementsWithIndex = new List<string>() { "OH", "SO<sub>3</sub>", "SO<sub>4</sub>", "NO<sub>3</sub>" };
         List<string> mathc = new List<string>();
@@ -155,20 +157,20 @@ public class InstantiateAtom : MonoBehaviour
 
         foreach (var a in AtomDict)
         {
-
+            
             foreach (var b in a.Value)
             {
                 if (b.Value == 1 && b.Key > 0)
                 {
-                    names.Add(a.Key);
+                    names.Add(getSpeacialName(a.Key, pNames));
                 }
                 else if (b.Value != 1 && b.Key > 0 && !getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add(a.Key + $"<sub>{b.Value}</sub>");
+                    names.Add(getSpeacialName(a.Key, pNames) + $"<sub>{b.Value}</sub>");
                 }
                 else if (b.Value != 1 && b.Key > 0 && getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add("(" + a.Key + ")" + $"<sub>{b.Value}</sub>");
+                    names.Add("(" + getSpeacialName(a.Key, pNames) + ")" + $"<sub>{b.Value}</sub>");
                 }
 
             }
@@ -180,15 +182,15 @@ public class InstantiateAtom : MonoBehaviour
             {
                 if (b.Value == 1 && b.Key < 0)
                 {
-                    names.Add(a.Key);
-                }
-                else if (b.Value != 1 && b.Key < 0 && !getSpecialAtom(ElementsWithIndex, a.Key))
-                {
-                    names.Add(a.Key + $"<sub>{b.Value}</sub>");
+                    names.Add(getSpeacialName(a.Key, pNames));
                 }
                 else if (b.Value != 1 && b.Key < 0 && getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add("(" + a.Key + ")" + $"<sub>{b.Value}</sub>");
+                    names.Add(getSpeacialName(a.Key, pNames) + $"<sub>{b.Value}</sub>");
+                }
+                else if (b.Value != 1 && b.Key < 0 && !getSpecialAtom(ElementsWithIndex, a.Key))
+                {
+                    names.Add("(" + getSpeacialName(a.Key, pNames) + ")" + $"<sub>{b.Value}</sub>");
                 }
 
             }
@@ -237,6 +239,19 @@ public class InstantiateAtom : MonoBehaviour
         return false;
     }
 
+    private string getSpeacialName(string el, List<Atom> PNames)
+    {
+        foreach (var a in PNames)
+        {
+            if (el == a.Name)
+            {
+                return a.NameForPresentation;
+            }
+        }
+        return "No Matches";
+    }
+
+
     private int ValencyLogic(List<int> electrons, int el)
     {
         int lcm = FindLCM(electrons);
@@ -274,7 +289,7 @@ public class InstantiateAtom : MonoBehaviour
         }
         return lcm;
     }
-
+#endregion
 
     //Mrazq da programiram taka....
     List<string> Positive_ElementsEntiPyt = new List<string>();
@@ -315,17 +330,14 @@ public class InstantiateAtom : MonoBehaviour
 
     private void SubmitRedox(string arg0)
     {
-
-
-        //Debug.Log(arg0);
-        char[] things = {' ', '+', '(', ')' };
+        char[] things = {' ', '+'};
         string[] atoms = arg0.Split(things);
 
         List<string> FindAtoms = new List<string>();
 
         for(int i = 0; i < Positive_ElementsEntiPyt.Count; i++)
         {
-            if(arg0.Contains(Positive_ElementsEntiPyt[i]))
+            if (atoms[0].Contains(Positive_ElementsEntiPyt[i]))
             {
                 FindAtoms.Add(Positive_ElementsEntiPyt[i]);
             }
@@ -333,20 +345,49 @@ public class InstantiateAtom : MonoBehaviour
 
         for(int i = 0; i < Negative_ElementsEntiPyt.Count; i++)
         {
-            if (arg0.Contains(Negative_ElementsEntiPyt[i]))
+            if (atoms[0].Contains(Negative_ElementsEntiPyt[i]))
             {
                 FindAtoms.Add(Negative_ElementsEntiPyt[i]);
             }
         }
 
+        for (int i = 0; i < Positive_ElementsEntiPyt.Count; i++)
+        {
+            for (int y = 1; y < atoms.Length; y++)
+            {
+                if (atoms[y].Contains(Positive_ElementsEntiPyt[i]))
+                {
+                    FindAtoms.Add(Positive_ElementsEntiPyt[i]);
+                }
+            }
+        }
+
+        for (int i = 0; i < Negative_ElementsEntiPyt.Count; i++)
+        {
+            for (int y = 1; y < atoms.Length; y++)
+            {
+                if (atoms[y].Contains(Negative_ElementsEntiPyt[i]))
+                {
+                    FindAtoms.Add(Negative_ElementsEntiPyt[i]);
+                }
+            }
+        }
+        //The findAtoms list should look like this metal, nonmetal, metal
+
+        CheckElementsMetals(FindAtoms[2]);
+        CheckElementsNonMetals(FindAtoms[1]);
+
+        
 
         List<string> equations = new List<string>();
-        foreach (var a in FindAtoms)
+        equations.Add(CreateEquation());
+        text.text += $" + {FindAtoms[0]}";
+        /*foreach (var a in FindAtoms)
         {
             CheckElementsMetals(a);
             CheckElementsNonMetals(a);
             equations.Add(CreateEquation());
-        }
+        }*/
     }
 
     public void CheckElementsMetals(string Element)
@@ -380,3 +421,4 @@ public class InstantiateAtom : MonoBehaviour
 
 
 }
+//1:54 :,( last edited

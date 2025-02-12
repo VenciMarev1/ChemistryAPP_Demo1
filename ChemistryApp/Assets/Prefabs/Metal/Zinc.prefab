@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AtomGO: {fileID: 2480191243880700778}
   Name: Zn
+  NameForPresentation: Zn
   Electrons: 2
   Text_ForSelected: {fileID: 832143791146740394, guid: 3dabf6e00db8f4e39b86e2638b2fe589, type: 3}
   NameCreatedElement: {fileID: 3663589647451170785, guid: 01dff167e0f4f46f59f61ada8f935787, type: 3}

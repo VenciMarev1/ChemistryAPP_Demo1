@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AtomGO: {fileID: 4411559597765776328}
   Name: OH
+  NameForPresentation: OH
   Electrons: -1
   Text_ForSelected: {fileID: 0}
   NameCreatedElement: {fileID: 0}
