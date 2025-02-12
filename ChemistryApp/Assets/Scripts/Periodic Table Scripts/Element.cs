@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Element : MonoBehaviour
 {
     public GameObject Element_Table;
+    public Image menu;
+    bool mousePressed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +21,27 @@ public class Element : MonoBehaviour
         
     }
 
+
     private void OnMouseOver()
     {
         Element_Table.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        if(mousePressed)
+        {
+            menu.rectTransform.anchoredPosition = new Vector3(995, 3, 0);
+        }
+        
     }
     private void OnMouseExit()
     {
         Element_Table.transform.localScale = new Vector3(1, 1, 1);
+
     }
+
+    private void OnMouseDown()
+    {
+        mousePressed = true;
+    }
+
+
+
 }
