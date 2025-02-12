@@ -16,13 +16,13 @@ public class CreatingElementsLogic : MonoBehaviour
     Dictionary<string, Dictionary<int, int>> AtomDict; //Dictionary<name of the atom, Dictionary<electrons, index>
 
 
-    public TMP_InputField InputEquation;
+   // public TMP_InputField InputEquation;
 
     // Start is called before the first frame update
     void Start()
     {
         var se = new InputField.SubmitEvent();
-        InputEquation.onEndEdit.AddListener(SubmitRedox);
+      //  InputEquation.onEndEdit.AddListener(SubmitRedox);
 
 
         Atoms = new List<GameObject>();
