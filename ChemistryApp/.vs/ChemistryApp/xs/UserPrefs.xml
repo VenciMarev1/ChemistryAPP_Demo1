@@ -1,31 +1,29 @@
 ﻿<Properties StartupConfiguration="{F377C16F-EA66-6563-6745-34990E86D0B1}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cdc76d8e-fc11-45be-b6ce-024c6f1ae58b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4eca5b34-613d-49ec-b0bf-134af6cbc434" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Periodic Table Scripts/Element.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PeriodicTableScript.cs">
     <Files>
       <File FileName="Assets/Scripts/Atom.cs" />
       <File FileName="Assets/Scripts/CreatingElementsLogic.cs" />
       <File FileName="Assets/Scripts/InstantiateAtom.cs" />
-      <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" Line="32" Column="1" />
-      <File FileName="Assets/Scripts/PeriodicTableScript.cs" Line="138" Column="47" />
+      <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" Line="13" Column="23" />
+      <File FileName="Assets/Scripts/PeriodicTableScript.cs" Line="234" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ChemistryApp" expanded="True">
+          <Node name="ChemistryApp">
             <Node name="Assets" expanded="True">
               <Node name="Prefabs" expanded="True">
                 <Node name="Periodic Table" expanded="True" />
               </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="Periodic Table Scripts" expanded="True">
-                  <Node name="Element.cs" selected="True" />
-                </Node>
+                <Node name="Periodic Table Scripts" expanded="True" />
               </Node>
             </Node>
           </Node>
