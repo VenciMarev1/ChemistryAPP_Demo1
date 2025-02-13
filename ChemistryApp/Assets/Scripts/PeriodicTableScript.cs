@@ -257,23 +257,23 @@ public class PeriodicTableLayout : MonoBehaviour
     {
         for (int atomicNumber = 1; atomicNumber <= totalElements; atomicNumber++)
         {
-            Transform elementTransform = GetElementTransform(atomicNumber);
+            Transform elementTransform = GetElementTransform1(atomicNumber);
 
             // If the element prefab doesn't exist in the scene yet, instantiate one
             if (elementTransform == null)
             {
                 GameObject newElement = Instantiate(elementPrefab, periodicTableParent);
-                newElement.name = atomicNumber + "_" + GetElementName(atomicNumber); // Name format: "1_Hydrogen"
+                newElement.name = atomicNumber + "_" + GetElementName1(atomicNumber); // Name format: "1_Hydrogen"
                 elementTransform = newElement.transform;
             }
 
             // Position the element in the correct place
-            Vector2 position = GetPosition(atomicNumber);
+            Vector2 position = GetPositionEL(atomicNumber);
             elementTransform.localPosition = new Vector3(position.x * elementSize.x, -position.y * elementSize.y, 0);
         }
     }
 
-    Transform GetElementTransform(int atomicNumber)
+    Transform GetElementTransform1(int atomicNumber)
     {
         foreach (Transform element in periodicTableParent)
         {
@@ -287,7 +287,7 @@ public class PeriodicTableLayout : MonoBehaviour
     }
 
     // Custom method to get the element name based on atomic number
-    string GetElementName(int atomicNumber)
+    string GetElementName1(int atomicNumber)
     {
         switch (atomicNumber)
         {
@@ -414,7 +414,7 @@ public class PeriodicTableLayout : MonoBehaviour
     }
 
     // Define the periodic table layout (row, column positions) for each element based on atomic number
-    Vector2 GetPosition(int atomicNumber)
+    Vector2 GetPositionEL(int atomicNumber)
     {
         switch (atomicNumber)
         {
