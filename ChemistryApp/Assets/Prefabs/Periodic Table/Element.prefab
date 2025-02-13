@@ -122,7 +122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Element_Table: {fileID: 2128988793396978704}
-  menu: {fileID: 0}
+  S_Name: {fileID: 2292657837314058048}
+  F_Name: {fileID: 2534605862825390762}
+  Number: {fileID: 8474981504175922064}
 --- !u!1 &3309742432189815691
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +479,7 @@ GameObject:
   - component: {fileID: 2152353170370279348}
   - component: {fileID: 2534605862825390762}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: FullName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

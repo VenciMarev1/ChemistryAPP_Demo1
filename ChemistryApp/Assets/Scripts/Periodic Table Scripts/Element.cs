@@ -9,6 +9,10 @@ public class Element : MonoBehaviour
     public GameObject Element_Table;
     //public Image menu;
     bool mousePressed = false;
+    public TMP_Text S_Name;
+    public TMP_Text F_Name;
+    public TMP_Text Number;
+
 
     Vector3 currentScale = new Vector3();
     // Start is called before the first frame update

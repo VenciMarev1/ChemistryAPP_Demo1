@@ -28,124 +28,124 @@ public class PeriodicTableLayout : MonoBehaviour
     // Mapping of atomic number to element type
     private string[] elementTypes = new string[]
     {
-         "Reactive non-metals",   // 1 - Hydrogen
-    "Noble gases",           // 2 - Helium
-    "Alkali metals",         // 3 - Lithium
-    "Alkaline earth metals", // 4 - Beryllium
-    "Metalloids",            // 5 - Boron
-    "Reactive non-metals",   // 6 - Carbon
-    "Reactive non-metals",   // 7 - Nitrogen
-    "Reactive non-metals",   // 8 - Oxygen
-    "Reactive non-metals",   // 9 - Fluorine
-    "Noble gases",           // 10 - Neon
-    "Alkali metals",         // 11 - Sodium
-    "Alkaline earth metals", // 12 - Magnesium
-    "Post-transition metals",// 13 - Aluminum
-    "Metalloids",            // 14 - Silicon
-    "Reactive non-metals",   // 15 - Phosphorus
-    "Reactive non-metals",   // 16 - Sulfur
-    "Reactive non-metals",   // 17 - Chlorine
-    "Noble gases",           // 18 - Argon
-    "Alkali metals",         // 19 - Potassium
-    "Alkaline earth metals", // 20 - Calcium
-    "Transition metals",     // 21 - Scandium
-    "Transition metals",     // 22 - Titanium
-    "Transition metals",     // 23 - Vanadium
-    "Transition metals",     // 24 - Chromium
-    "Transition metals",     // 25 - Manganese
-    "Transition metals",     // 26 - Iron
-    "Transition metals",     // 27 - Cobalt
-    "Transition metals",     // 28 - Nickel
-    "Transition metals",     // 29 - Copper
-    "Post-transition metals",// 30 - Zinc
-    "Post-transition metals",// 31 - Gallium
-    "Metalloids",            // 32 - Germanium
-    "Metalloids",            // 33 - Arsenic
-    "Reactive non-metals",   // 34 - Selenium
-    "Reactive non-metals",   // 35 - Bromine
-    "Noble gases",           // 36 - Krypton
-    "Alkali metals",         // 37 - Rubidium
-    "Alkaline earth metals", // 38 - Strontium
-    "Transition metals",     // 39 - Yttrium
-    "Transition metals",     // 40 - Zirconium
-    "Transition metals",     // 41 - Niobium
-    "Transition metals",     // 42 - Molybdenum
-    "Transition metals",     // 43 - Technetium
-    "Transition metals",     // 44 - Ruthenium
-    "Transition metals",     // 45 - Rhodium
-    "Transition metals",     // 46 - Palladium
-    "Transition metals",     // 47 - Silver
-    "Post-transition metals",// 48 - Cadmium
-    "Post-transition metals",// 49 - Indium
-    "Post-transition metals",// 50 - Tin
-    "Metalloids",            // 51 - Antimony
-    "Metalloids",            // 52 - Tellurium
-    "Reactive non-metals",   // 53 - Iodine
-    "Noble gases",           // 54 - Xenon
-    "Alkali metals",         // 55 - Cesium
-    "Alkaline earth metals", // 56 - Barium
-    "Transition metals",     // 57 - Lanthanum
-    "Lanthanides",           // 58 - Cerium
-    "Lanthanides",           // 59 - Praseodymium
-    "Lanthanides",           // 60 - Neodymium
-    "Lanthanides",           // 61 - Promethium
-    "Lanthanides",           // 62 - Samarium
-    "Lanthanides",           // 63 - Europium
-    "Lanthanides",           // 64 - Gadolinium
-    "Lanthanides",           // 65 - Terbium
-    "Lanthanides",           // 66 - Dysprosium
-    "Lanthanides",           // 67 - Holmium
-    "Lanthanides",           // 68 - Erbium
-    "Lanthanides",           // 69 - Thulium
-    "Lanthanides",           // 70 - Ytterbium
-    "Lanthanides",           // 71 - Lutetium
-    "Transition metals",     // 72 - Hafnium
-    "Transition metals",     // 73 - Tantalum
-    "Transition metals",     // 74 - Tungsten
-    "Transition metals",     // 75 - Rhenium
-    "Transition metals",     // 76 - Osmium
-    "Transition metals",     // 77 - Iridium
-    "Transition metals",     // 78 - Platinum
-    "Post-transition metals",// 79 - Gold
-    "Post-transition metals",// 80 - Mercury
-    "Post-transition metals",// 81 - Thallium
-    "Post-transition metals",// 82 - Lead
-    "Post-transition metals",// 83 - Bismuth
-    "Post-transition metals",// 84 - Polonium
-    "Noble gases",           // 85 - Astatine
-    "Noble gases",           // 86 - Radon
-    "Alkali metals",         // 87 - Francium
-    "Alkaline earth metals", // 88 - Radium
-    "Transition metals",     // 89 - Actinium
-    "Actinides",             // 90 - Thorium
-    "Actinides",             // 91 - Protactinium
-    "Actinides",             // 92 - Uranium
-    "Actinides",             // 93 - Neptunium
-    "Actinides",             // 94 - Plutonium
-    "Actinides",             // 95 - Americium
-    "Actinides",             // 96 - Curium
-    "Actinides",             // 97 - Berkelium
-    "Actinides",             // 98 - Californium
-    "Actinides",             // 99 - Einsteinium
-    "Actinides",             // 100 - Fermium
-    "Actinides",             // 101 - Mendelevium
-    "Actinides",             // 102 - Nobelium
-    "Actinides",             // 103 - Lawrencium
-    "Transition metals",     // 104 - Rutherfordium
-    "Transition metals",     // 105 - Dubnium
-    "Transition metals",     // 106 - Seaborgium
-    "Transition metals",     // 107 - Bohrium
-    "Transition metals",     // 108 - Hassium
-    "Unknown properties",    // 109 - Meitnerium
-    "Unknown properties",    // 110 - Darmstadtium
-    "Unknown properties",    // 111 - Roentgenium
-    "Unknown properties",    // 112 - Copernicium
-    "Unknown properties",    // 113 - Nihonium
-    "Unknown properties",    // 114 - Flerovium
-    "Unknown properties",    // 115 - Moscovium
-    "Unknown properties",    // 116 - Livermorium
-    "Unknown properties",    // 117 - Tennessine
-    "Unknown properties"     // 118 - Oganesson
+        "Reactive non-metals",   // 1 - Hydrogen
+        "Noble gases",           // 2 - Helium
+        "Alkali metals",         // 3 - Lithium
+        "Alkaline earth metals", // 4 - Beryllium
+        "Metalloids",            // 5 - Boron
+        "Reactive non-metals",   // 6 - Carbon
+        "Reactive non-metals",   // 7 - Nitrogen
+        "Reactive non-metals",   // 8 - Oxygen
+        "Reactive non-metals",   // 9 - Fluorine
+        "Noble gases",           // 10 - Neon
+        "Alkali metals",         // 11 - Sodium
+        "Alkaline earth metals", // 12 - Magnesium
+        "Post-transition metals",// 13 - Aluminum
+        "Metalloids",            // 14 - Silicon
+        "Reactive non-metals",   // 15 - Phosphorus
+        "Reactive non-metals",   // 16 - Sulfur
+        "Reactive non-metals",   // 17 - Chlorine
+        "Noble gases",           // 18 - Argon
+        "Alkali metals",         // 19 - Potassium
+        "Alkaline earth metals", // 20 - Calcium
+        "Transition metals",     // 21 - Scandium
+        "Transition metals",     // 22 - Titanium
+        "Transition metals",     // 23 - Vanadium
+        "Transition metals",     // 24 - Chromium
+        "Transition metals",     // 25 - Manganese
+        "Transition metals",     // 26 - Iron
+        "Transition metals",     // 27 - Cobalt
+        "Transition metals",     // 28 - Nickel
+        "Transition metals",     // 29 - Copper
+        "Post-transition metals",// 30 - Zinc
+        "Post-transition metals",// 31 - Gallium
+        "Metalloids",            // 32 - Germanium
+        "Metalloids",            // 33 - Arsenic
+        "Reactive non-metals",   // 34 - Selenium
+        "Reactive non-metals",   // 35 - Bromine
+        "Noble gases",           // 36 - Krypton
+        "Alkali metals",         // 37 - Rubidium
+        "Alkaline earth metals", // 38 - Strontium
+        "Transition metals",     // 39 - Yttrium
+        "Transition metals",     // 40 - Zirconium
+        "Transition metals",     // 41 - Niobium
+        "Transition metals",     // 42 - Molybdenum
+        "Transition metals",     // 43 - Technetium
+        "Transition metals",     // 44 - Ruthenium
+        "Transition metals",     // 45 - Rhodium
+        "Transition metals",     // 46 - Palladium
+        "Transition metals",     // 47 - Silver
+        "Post-transition metals",// 48 - Cadmium
+        "Post-transition metals",// 49 - Indium
+        "Post-transition metals",// 50 - Tin
+        "Metalloids",            // 51 - Antimony
+        "Metalloids",            // 52 - Tellurium
+        "Reactive non-metals",   // 53 - Iodine
+        "Noble gases",           // 54 - Xenon
+        "Alkali metals",         // 55 - Cesium
+        "Alkaline earth metals", // 56 - Barium
+        "Transition metals",     // 57 - Lanthanum
+        "Lanthanides",           // 58 - Cerium
+        "Lanthanides",           // 59 - Praseodymium
+        "Lanthanides",           // 60 - Neodymium
+        "Lanthanides",           // 61 - Promethium
+        "Lanthanides",           // 62 - Samarium
+        "Lanthanides",           // 63 - Europium
+        "Lanthanides",           // 64 - Gadolinium
+        "Lanthanides",           // 65 - Terbium
+        "Lanthanides",           // 66 - Dysprosium
+        "Lanthanides",           // 67 - Holmium
+        "Lanthanides",           // 68 - Erbium
+        "Lanthanides",           // 69 - Thulium
+        "Lanthanides",           // 70 - Ytterbium
+        "Lanthanides",           // 71 - Lutetium
+        "Transition metals",     // 72 - Hafnium
+        "Transition metals",     // 73 - Tantalum
+        "Transition metals",     // 74 - Tungsten
+        "Transition metals",     // 75 - Rhenium
+        "Transition metals",     // 76 - Osmium
+        "Transition metals",     // 77 - Iridium
+        "Transition metals",     // 78 - Platinum
+        "Post-transition metals",// 79 - Gold
+        "Post-transition metals",// 80 - Mercury
+        "Post-transition metals",// 81 - Thallium
+        "Post-transition metals",// 82 - Lead
+        "Post-transition metals",// 83 - Bismuth
+        "Post-transition metals",// 84 - Polonium
+        "Noble gases",           // 85 - Astatine
+        "Noble gases",           // 86 - Radon
+        "Alkali metals",         // 87 - Francium
+        "Alkaline earth metals", // 88 - Radium
+        "Transition metals",     // 89 - Actinium
+        "Actinides",             // 90 - Thorium
+        "Actinides",             // 91 - Protactinium
+        "Actinides",             // 92 - Uranium
+        "Actinides",             // 93 - Neptunium
+        "Actinides",             // 94 - Plutonium
+        "Actinides",             // 95 - Americium
+        "Actinides",             // 96 - Curium
+        "Actinides",             // 97 - Berkelium
+        "Actinides",             // 98 - Californium
+        "Actinides",             // 99 - Einsteinium
+        "Actinides",             // 100 - Fermium
+        "Actinides",             // 101 - Mendelevium
+        "Actinides",             // 102 - Nobelium
+        "Actinides",             // 103 - Lawrencium
+        "Transition metals",     // 104 - Rutherfordium
+        "Transition metals",     // 105 - Dubnium
+        "Transition metals",     // 106 - Seaborgium
+        "Transition metals",     // 107 - Bohrium
+        "Transition metals",     // 108 - Hassium
+        "Unknown properties",    // 109 - Meitnerium
+        "Unknown properties",    // 110 - Darmstadtium
+        "Unknown properties",    // 111 - Roentgenium
+        "Unknown properties",    // 112 - Copernicium
+        "Unknown properties",    // 113 - Nihonium
+        "Unknown properties",    // 114 - Flerovium
+        "Unknown properties",    // 115 - Moscovium
+        "Unknown properties",    // 116 - Livermorium
+        "Unknown properties",    // 117 - Tennessine
+        "Unknown properties"     // 118 - Oganesson
     };
 
 
@@ -280,6 +280,10 @@ public class PeriodicTableLayout : MonoBehaviour
             {
                 GameObject newElement = Instantiate(elementPrefab, periodicTableParent.transform);
                 newElement.name = atomicNumber + "_" + GetElementName1(atomicNumber); // Name format: "1_Hydrogen"
+                newElement.GetComponent<Element>().S_Name.text = GetElementSymbol(atomicNumber);
+                newElement.GetComponent<Element>().F_Name.text = GetElementFullName(atomicNumber);
+                newElement.GetComponent<Element>().Number.text = atomicNumber.ToString();
+
                 elementTransform = newElement.transform;
             }
 
