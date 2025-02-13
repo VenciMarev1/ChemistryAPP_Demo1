@@ -4,15 +4,20 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4eca5b34-613d-49ec-b0bf-134af6cbc434" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/Assets/Scripts/PeriodicTableScript.cs" relfile="Assets/Scripts/PeriodicTableScript.cs" line="212" column="1" />
+      <Breakpoint file="/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/Assets/Scripts/PeriodicTableScript.cs" relfile="Assets/Scripts/PeriodicTableScript.cs" line="178" column="1" />
+      <Breakpoint file="/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/Assets/Scripts/PeriodicTableScript.cs" relfile="Assets/Scripts/PeriodicTableScript.cs" line="169" column="1" />
+      <Breakpoint file="/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/Assets/Scripts/PeriodicTableScript.cs" relfile="Assets/Scripts/PeriodicTableScript.cs" line="275" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PeriodicTableScript.cs">
     <Files>
       <File FileName="Assets/Scripts/Atom.cs" />
       <File FileName="Assets/Scripts/CreatingElementsLogic.cs" />
       <File FileName="Assets/Scripts/InstantiateAtom.cs" />
-      <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" Line="13" Column="23" />
-      <File FileName="Assets/Scripts/PeriodicTableScript.cs" Line="234" Column="13" />
+      <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" />
+      <File FileName="Assets/Scripts/PeriodicTableScript.cs" Line="293" Column="80" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,6 +33,9 @@
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -593,10 +593,10 @@ MonoBehaviour:
   postTransitionMetalsColor: {r: 0.88594866, g: 0, b: 1, a: 0}
   metalloidsColor: {r: 0.048089504, g: 0, b: 1, a: 0}
   reactiveNonMetalsColor: {r: 0.2950113, g: 0.15419188, b: 0.5188679, a: 0}
-  nobleGasesColor: {r: 0, g: 0, b: 0, a: 0}
-  lanthanidesColor: {r: 0, g: 0, b: 0, a: 0}
-  actinidesColor: {r: 0, g: 0, b: 0, a: 0}
-  unknownPropertiesColor: {r: 0, g: 0, b: 0, a: 0}
+  nobleGasesColor: {r: 0.7015452, g: 0.9339623, b: 0.5771182, a: 0}
+  lanthanidesColor: {r: 0.6509434, g: 0.42432168, b: 0.03991636, a: 0}
+  actinidesColor: {r: 0.19953722, g: 0.7169812, b: 0.24700932, a: 0}
+  unknownPropertiesColor: {r: 0.19971518, g: 0.8301887, b: 0.75496185, a: 0}
   elementPrefab: {fileID: 2128988793396978704, guid: d994f074b547040d8807e97cd258ccef, type: 3}
   elementSize: {x: 1.5, y: 1.5}
   startPosition: {x: -12, y: 5}

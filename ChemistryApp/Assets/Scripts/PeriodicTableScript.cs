@@ -8,7 +8,7 @@ public class PeriodicTableLayout : MonoBehaviour
 {
     [Header("Element Prefabs (ordered by atomic number)")]
     public List<GameObject> elementPrefabs = new List<GameObject>();
-   // List<GameObject> El = new List<GameObject>();
+    // List<GameObject> El = new List<GameObject>();
 
     [Header("Periodic Table Parent Object")]
     public GameObject periodicTableParent;
@@ -272,7 +272,7 @@ public class PeriodicTableLayout : MonoBehaviour
 
     void Start()
     {
-        BuildPeriodicTable();
+        //BuildPeriodicTable();
         CompleteAndPositionElements();
     }
 
@@ -290,10 +290,10 @@ public class PeriodicTableLayout : MonoBehaviour
                 newElement.GetComponent<Element>().S_Name.text = GetElementSymbol(atomicNumber);
                 newElement.GetComponent<Element>().F_Name.text = GetElementFullName(atomicNumber);
                 newElement.GetComponent<Element>().Number.text = atomicNumber.ToString();
+                AssignElementColor(newElement, elementTypes[atomicNumber - 1]);
 
                 elementTransform = newElement.transform;
             }
-
             // Position the element in the correct place
             Vector2 position = GetPositionEL(atomicNumber);
             elementTransform.localPosition = new Vector3(position.x * elementSize.x, -position.y * elementSize.y, 0);
