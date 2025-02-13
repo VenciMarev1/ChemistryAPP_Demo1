@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class PeriodicTableLayout : MonoBehaviour
 {
     [Header("Element Prefabs (ordered by atomic number)")]
-    public List<GameObject> elementPrefabs;
+    public List<GameObject> elementPrefabs = new List<GameObject>();
+   // List<GameObject> El = new List<GameObject>();
 
     [Header("Periodic Table Parent Object")]
     public GameObject periodicTableParent;
@@ -25,7 +26,7 @@ public class PeriodicTableLayout : MonoBehaviour
     public Color unknownPropertiesColor;
 
     // Mapping of atomic number to element type
-    private string[] elementTypes = new string[118]
+    private string[] elementTypes = new string[]
     {
         "Reactive non-metals",  // 1 - Hydrogen
         "Noble gases",          // 2 - Helium
@@ -134,10 +135,9 @@ public class PeriodicTableLayout : MonoBehaviour
 
     void BuildPeriodicTable()
     {
+        GameObject element = new GameObject();
         for (int i = 0; i < elementPrefabs.Count; i++)
         {
-            GameObject element = Instantiate(elementPrefabs[i], periodicTableParent.transform);
-
             int atomicNumber = i + 1;
             Vector2 position = GetElementPosition(atomicNumber);
             element.transform.localPosition = new Vector3(position.x * 100, position.y * -100, 0); // Adjust the spacing multiplier as needed
@@ -208,7 +208,7 @@ public class PeriodicTableLayout : MonoBehaviour
 
     string GetElementSymbol(int atomicNumber)
     {
-        string[] elementSymbols = new string[118]
+        string[] elementSymbols = new string[]
         {
             "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar", "K", "Ca",
             "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr",
@@ -222,7 +222,7 @@ public class PeriodicTableLayout : MonoBehaviour
 
     string GetElementFullName(int atomicNumber)
     {
-        string[] elementFullNames = new string[118]
+        string[] elementFullNames = new string[]
         {
             "Hydrogen", "Helium", "Lithium", "Beryllium", "Boron", "Carbon", "Nitrogen", "Oxygen", "Fluorine", "Neon",
             "Sodium", "Magnesium", "Aluminum", "Silicon", "Phosphorus", "Sulfur", "Chlorine", "Argon", "Potassium", "Calcium",
@@ -239,7 +239,7 @@ public class PeriodicTableLayout : MonoBehaviour
         return elementFullNames[atomicNumber - 1];
     }
 
-    public Transform periodicTableParent; // Drag the "PeriodicTable" parent object here
+   // public Transform periodicTableParent; // Drag the "PeriodicTable" parent object here
     public GameObject elementPrefab; // Assign the prefab for the periodic table elements
     public Vector2 elementSize = new Vector2(1.5f, 1.5f); // Adjust size if needed
     public Vector2 startPosition = new Vector2(-12f, 5f); // Starting point for top-left element (adjust as needed)
@@ -262,7 +262,7 @@ public class PeriodicTableLayout : MonoBehaviour
             // If the element prefab doesn't exist in the scene yet, instantiate one
             if (elementTransform == null)
             {
-                GameObject newElement = Instantiate(elementPrefab, periodicTableParent);
+                GameObject newElement = Instantiate(elementPrefab, periodicTableParent.transform);
                 newElement.name = atomicNumber + "_" + GetElementName1(atomicNumber); // Name format: "1_Hydrogen"
                 elementTransform = newElement.transform;
             }
@@ -275,7 +275,7 @@ public class PeriodicTableLayout : MonoBehaviour
 
     Transform GetElementTransform1(int atomicNumber)
     {
-        foreach (Transform element in periodicTableParent)
+        foreach (Transform element in periodicTableParent.transform)
         {
             string[] parts = element.name.Split('_');
             if (parts.Length > 1 && int.TryParse(parts[0], out int elementAtomicNumber) && elementAtomicNumber == atomicNumber)
@@ -485,7 +485,7 @@ public class PeriodicTableLayout : MonoBehaviour
             // Row 6: Cs to Rn, with Lanthanides
             case 55: return new Vector2(0, 5); // Cs
             case 56: return new Vector2(1, 5); // Ba
-            case 57: return new Vector2(2, 8); // La (Lanthanides start below)
+            case 57: return new Vector2(2, 5); // La (Lanthanides start below)
             case 58: return new Vector2(3, 8); // Ce
             case 59: return new Vector2(4, 8); // Pr
             case 60: return new Vector2(5, 8); // Nd
@@ -519,7 +519,7 @@ public class PeriodicTableLayout : MonoBehaviour
             // Row 7: Fr to Og, with Actinides
             case 87: return new Vector2(0, 6); // Fr
             case 88: return new Vector2(1, 6); // Ra
-            case 89: return new Vector2(2, 9); // Ac (Actinides start below)
+            case 89: return new Vector2(2, 6); // Ac (Actinides start below)
             case 90: return new Vector2(3, 9); // Th
             case 91: return new Vector2(4, 9); // Pa
             case 92: return new Vector2(5, 9); // U

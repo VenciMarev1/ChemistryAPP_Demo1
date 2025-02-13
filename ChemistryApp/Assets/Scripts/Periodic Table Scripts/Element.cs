@@ -7,7 +7,7 @@ using UnityEngine;
 public class Element : MonoBehaviour
 {
     public GameObject Element_Table;
-    public Image menu;
+    //public Image menu;
     bool mousePressed = false;
 
     Vector3 currentScale = new Vector3();
@@ -26,10 +26,10 @@ public class Element : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Element_Table.transform.localScale = new Vector3(1f, 1f, 1f);
+        Element_Table.transform.localScale = new Vector3(1.6f, 1.6f, 1.6f);
         if(mousePressed)
         {
-            menu.rectTransform.anchoredPosition = new Vector3(995, 3, 0);
+            //menu.rectTransform.anchoredPosition = new Vector3(995, 3, 0);
         }
         
     }
