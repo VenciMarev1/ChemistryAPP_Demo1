@@ -1,16 +1,12 @@
 ﻿<Properties StartupConfiguration="{F377C16F-EA66-6563-6745-34990E86D0B1}|">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b1c60385-ae1c-4fc1-9887-50a52850df9e" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e8430580-0583-4ff3-87f4-d7d91b63964c" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/InstantiateAtom.cs">
     <Files>
-      <File FileName="Assets/Scripts/Atom.cs" Line="10" Column="24" />
+      <File FileName="Assets/Scripts/Atom.cs" Line="13" Column="38" />
       <File FileName="Assets/Scripts/CreatingElementsLogic.cs" Line="281" Column="115" />
-      <File FileName="Assets/Scripts/InstantiateAtom.cs" Line="424" Column="23" />
-      <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" Line="29" Column="67" />
+      <File FileName="Assets/Scripts/InstantiateAtom.cs" Line="65" Column="10" />
+      <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" />
+      <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" Line="275" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,4 +26,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>
