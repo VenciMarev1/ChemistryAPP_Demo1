@@ -18,6 +18,10 @@ public class InstantiateAtom : MonoBehaviour
     List<Atom> atoms_Script;
 
     public TMP_InputField Input;
+
+
+    Dictionary<string, Dictionary<int, int>> AtomDict;
+    List<GameObject> Atoms;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,85 +35,52 @@ public class InstantiateAtom : MonoBehaviour
         
     }
 
-   /* public void Check()
-    {
-        int index = optionMetal.value;
-
-        for (int i = 0; i < Metals.Count; i++)
-        {
-            if (i == index)
-            {
-                Debug.Log(Metals[i].name);
-                //InstantiateObject(i);
-            }
-        }
-    }*/
-
     public void InstantiateObject(int index)
     {
         Instantiate(Metals[index],new Vector3(-3, Metals[index].transform.position.y, Metals[index].transform.position.z),Quaternion.identity);
     }
 
     #region
-    //Tva nai veroqtno shte trqbva da e v otdelen cs fail.
 
     public string SolveChemEqation(int Ion, int Anion)
     {
         List<GameObject> Atoms = new List<GameObject>();
-        Dictionary<string, Dictionary<int, int>> AtomDict = new Dictionary<string, Dictionary<int, int>>();
+        AtomDict = new Dictionary<string, Dictionary<int, int>>();
         List<Atom> AtomScript = new List<Atom>();
        /* Anion = optionNonMetal.value;
         Ion = optionMetal.value;*/
 
+
+       //Checks for metals by their id and adds it to the list with metals
         for (int i = 0; i < Metals.Count; i++)
         {
             if (i == Ion)
             {
-               // Debug.Log(Metals[i].name);
-                //InstantiateObject(i);
                 Atoms.Add(Metals[i]);
             }
         }
 
+        //Checks for non metals by their id and adds it to the list with Non metals
         for (int i = 0; i < NonMetals.Count; i++)
         {
             if (i == Anion)
             {
-               // Debug.Log(NonMetals[i].name);
-                //InstantiateObject(i);
                 Atoms.Add(NonMetals[i]);
             }
         }
 
+        //Gets the script from the gameobject
         for (int i = 0; i < Atoms.Count; i++)
         {
             AtomScript.Add(Atoms[i].GetComponent<Atom>());
         }
 
+
         if (AtomScript.Count >= 1)
         {
-            return SortAtoms(AtomScript, AtomDict);
+            return ElementsLogic(AtomScript, AtomDict);
         }
         else return "Null";
-    }
-
-
-    private string SortAtoms(List<Atom> atomScript, Dictionary<string, Dictionary<int, int>> AtomDict)
-    {
-        /* for (int i = 0; i < atomScript.Count; i++)
-         {
-             for (int j = 1; j < atomScript.Count - 1; j++)
-             {
-                 if (atomScript[i].Electrons < atomScript[j].Electrons)
-                 {
-                     Atom tmp = atomScript[i];
-                     atomScript[i] = atomScript[j];
-                     atomScript[j] = tmp;
-                 }
-             }
-         }*/
-
-        return ElementsLogic(atomScript, AtomDict);
     }
 
     private string ElementsLogic(List<Atom> atomScript, Dictionary<string, Dictionary<int,int>> AtomDict)
@@ -121,14 +92,11 @@ public class InstantiateAtom : MonoBehaviour
             electrons.Add(Math.Abs(a.Electrons));
         }
 
-        //Putting the information in the dictonaries
+        //Putting the information into the dictonary
         for (int i = 0; i < atomScript.Count; i++)
         {
             Dictionary<int, int> valencyAndIndex = new Dictionary<int, int>();
-
             valencyAndIndex.Add(atomScript[i].Electrons, Math.Abs(ValencyLogic(electrons, atomScript[i].Electrons)));
-
-            //Ima greshka zashtoto dictionarytata se podrejdat razlichno pri vsqka kompilaciq for some reason. Goadnqri!
             AtomDict.Add(atomScript[i].Name, valencyAndIndex);
         }
 
@@ -137,12 +105,13 @@ public class InstantiateAtom : MonoBehaviour
         {
             foreach (var b in a.Value)
             {
+                //elInfo.Add(new ElementInfo(a.Key, b.Key * b.Value));
                // Debug.Log("Name:" + a.Key + " Valency: " + b.Key + " Index: " + b.Value);
             }
         }
 
 
-       return DisplayElement(AtomDict, atomScript);
+        return DisplayElement(AtomDict, atomScript);
 
     }
 
@@ -295,41 +264,39 @@ public class InstantiateAtom : MonoBehaviour
     }
 #endregion
 
-    //Mrazq da programiram taka....
-    List<string> Positive_ElementsEntiPyt = new List<string>();
-    List<string> Negative_ElementsEntiPyt = new List<string>();
+    List<string> Positive_Elements = new List<string>();
+    List<string> Negative_Elements = new List<string>();
 
     private void AddElements()
     {
-        Positive_ElementsEntiPyt.Add("Li");
-        Positive_ElementsEntiPyt.Add("K");
-        Positive_ElementsEntiPyt.Add("Ba");
-        Positive_ElementsEntiPyt.Add("Ca");
-        Positive_ElementsEntiPyt.Add("Na");
-        Positive_ElementsEntiPyt.Add("Mg");
-        Positive_ElementsEntiPyt.Add("Al");
-        Positive_ElementsEntiPyt.Add("Zn");
-        Positive_ElementsEntiPyt.Add("Fe");
-        Positive_ElementsEntiPyt.Add("Ni");
-        Positive_ElementsEntiPyt.Add("Sn");
-        Positive_ElementsEntiPyt.Add("Pb");
-        Positive_ElementsEntiPyt.Add("Hydrogen");
-        Positive_ElementsEntiPyt.Add("Cu");
-        Positive_ElementsEntiPyt.Add("Hg");
-        Positive_ElementsEntiPyt.Add("Ag");
-        Positive_ElementsEntiPyt.Add("Au");
+        //Metals
+        Positive_Elements.Add("Li");
+        Positive_Elements.Add("K");
+        Positive_Elements.Add("Ba");
+        Positive_Elements.Add("Ca");
+        Positive_Elements.Add("Na");
+        Positive_Elements.Add("Mg");
+        Positive_Elements.Add("Al");
+        Positive_Elements.Add("Zn");
+        Positive_Elements.Add("Fe");
+        Positive_Elements.Add("Ni");
+        Positive_Elements.Add("Sn");
+        Positive_Elements.Add("Pb");
+        Positive_Elements.Add("Hydrogen");
+        Positive_Elements.Add("Cu");
+        Positive_Elements.Add("Hg");
+        Positive_Elements.Add("Ag");
+        Positive_Elements.Add("Au");
 
-
-        Negative_ElementsEntiPyt.Add("null");
-        Negative_ElementsEntiPyt.Add("I");
-        Negative_ElementsEntiPyt.Add("Br");
-        Negative_ElementsEntiPyt.Add("Cl");
-        Negative_ElementsEntiPyt.Add("OH");
-        Negative_ElementsEntiPyt.Add("SO4");
-        Negative_ElementsEntiPyt.Add("SO3");
-        Negative_ElementsEntiPyt.Add("NO3");
-
-        //:(
+        //Non Metals
+        Negative_Elements.Add("null");
+        Negative_Elements.Add("I");
+        Negative_Elements.Add("Br");
+        Negative_Elements.Add("Cl");
+        Negative_Elements.Add("OH");
+        Negative_Elements.Add("SO4");
+        Negative_Elements.Add("SO3");
+        Negative_Elements.Add("NO3");
     }
 
     private void SubmitRedox(string arg0)
@@ -340,40 +307,42 @@ public class InstantiateAtom : MonoBehaviour
         List<string> FindAtoms = new List<string>();
         atoms_Script = new List<Atom>();
 
-        for (int i = 0; i < Positive_ElementsEntiPyt.Count; i++)
+        for (int i = 0; i < Metals.Count; i++)
         {
-            if (atoms[0].Contains(Positive_ElementsEntiPyt[i]))
+            string name = Metals[i].GetComponent<Atom>().Name;
+            if (atoms[0].Contains(name))
             {
-                FindAtoms.Add(Positive_ElementsEntiPyt[i]);
+                FindAtoms.Add(name);
             }
         }
 
-        for(int i = 0; i < Negative_ElementsEntiPyt.Count; i++)
+        for(int i = 0; i < NonMetals.Count; i++)
         {
-            if (atoms[0].Contains(Negative_ElementsEntiPyt[i]))
+            string name = NonMetals[i].GetComponent<Atom>().Name;
+            if (atoms[0].Contains(name))
             {
-                FindAtoms.Add(Negative_ElementsEntiPyt[i]);
+                FindAtoms.Add(name);
             }
         }
 
-        for (int i = 0; i < Positive_ElementsEntiPyt.Count; i++)
+        for (int i = 0; i < Positive_Elements.Count; i++)
         {
             for (int y = 1; y < atoms.Length; y++)
             {
-                if (atoms[y].Contains(Positive_ElementsEntiPyt[i]))
+                if (atoms[y].Contains(Positive_Elements[i]))
                 {
-                    FindAtoms.Add(Positive_ElementsEntiPyt[i]);
+                    FindAtoms.Add(Positive_Elements[i]);
                 }
             }
         }
 
-        for (int i = 0; i < Negative_ElementsEntiPyt.Count; i++)
+        for (int i = 0; i < Negative_Elements.Count; i++)
         {
             for (int y = 1; y < atoms.Length; y++)
             {
-                if (atoms[y].Contains(Negative_ElementsEntiPyt[i]))
+                if (atoms[y].Contains(Negative_Elements[i]))
                 {
-                    FindAtoms.Add(Negative_ElementsEntiPyt[i]);
+                    FindAtoms.Add(Negative_Elements[i]);
                 }
             }
         }
@@ -444,8 +413,9 @@ public class InstantiateAtom : MonoBehaviour
         }
 
         string LeftSide = $"{a} + {atoms_Script[2].NameForPresentation}<sup>0</sup>";
-        string RightSide =  $"-> {b} + {atoms_Script[0].NameForPresentation}<sup>0</sup>";
+        string RightSide =  $"{b} + {atoms_Script[0].NameForPresentation}<sup>0</sup>";
 
+        
         //ChemicalEquationBalancer ch = new ChemicalEquationBalancer(text);
         //ch.Solve(e);
         //text.text = e;
@@ -453,6 +423,7 @@ public class InstantiateAtom : MonoBehaviour
 
     void BalancingSide()
     {
+        
     }
 
 
@@ -461,6 +432,18 @@ public class InstantiateAtom : MonoBehaviour
 
 
 
+}
+
+class ElementInfo
+{
+    public string Name { get; set; }
+    public int Valency { get; set; }
+
+    public ElementInfo(string name, int valency)
+    {
+        this.Name = name;
+        this.Valency = valency;
+    }
 }
 
 #region 
