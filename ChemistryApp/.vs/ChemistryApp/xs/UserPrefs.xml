@@ -1,21 +1,21 @@
 ﻿<Properties StartupConfiguration="{F377C16F-EA66-6563-6745-34990E86D0B1}|">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/Assets/Scripts/InstantiateAtom.cs" relfile="Assets/Scripts/InstantiateAtom.cs" line="359" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f480087a-a611-459b-b3ee-8e7bea5911b6" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7d8f5892-42fa-4e92-92b6-947754b37fa0" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Zad/GetAnswer.cs">
     <Files>
       <File FileName="Assets/Scripts/Atom.cs" />
-      <File FileName="Assets/Scripts/CreatingElementsLogic.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/InstantiateAtom.cs" Line="359" Column="31" />
+      <File FileName="Assets/Scripts/CreatingElementsLogic.cs" />
+      <File FileName="Assets/Scripts/InstantiateAtom.cs" />
       <File FileName="Assets/Scripts/Periodic Table Scripts/Element.cs" />
-      <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" Line="274" Column="1" />
-      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.7/Scripts/Runtime/TMP_InputField.cs" Line="3158" Column="1" />
+      <File FileName="Assets/Scripts/Zad/GetAnswer.cs" Line="14" Column="17" />
+      <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" />
+      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.7/Scripts/Runtime/TMPro_UGUI_Private.cs" />
+      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.7/Scripts/Runtime/TMP_InputField.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,6 +24,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Periodic Table Scripts" expanded="True" />
+                <Node name="Zad" expanded="True" />
               </Node>
             </Node>
           </Node>

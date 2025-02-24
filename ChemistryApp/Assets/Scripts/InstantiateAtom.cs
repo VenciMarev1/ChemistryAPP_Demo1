@@ -356,17 +356,13 @@ public class InstantiateAtom : MonoBehaviour
     {
 
         string a = SolveChemEqation(CheckElementsMetals(FindAtoms[0]), CheckElementsNonMetals(FindAtoms[1]));
-        List<int> c= Balance(Coefficient[0], Coefficient[1], Coefficient[2], Coefficient[3]);
-
-        string LeftSide = $"{c[2]}{a} + {c[0]}{atoms_Script[2].NameForPresentation}<sup>0</sup>";
-
-
         string b = SolveChemEqation(CheckElementsMetals(FindAtoms[2]), CheckElementsNonMetals(FindAtoms[1]));
-        string RightSide = $"{c[2]}{b} + {c[0]}{atoms_Script[0].NameForPresentation}<sup>0</sup>";
+
+        string LeftSide = $"{a} + {atoms_Script[2].NameForPresentation}<sup>0</sup>";
+        string RightSide = $"{b} + {atoms_Script[0].NameForPresentation}<sup>0</sup>";
 
 
-        //ChemicalEquationBalancer ch = new ChemicalEquationBalancer(text);
-        //ch.Solve(e);
+
         text.text = LeftSide + " -> " + RightSide;
 
     }
