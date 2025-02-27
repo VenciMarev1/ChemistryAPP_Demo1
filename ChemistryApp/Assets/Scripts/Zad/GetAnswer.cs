@@ -16,6 +16,7 @@ public class GetAnswer : MonoBehaviour
     public Image image;
     public Animator a;
     public GameObject ans;
+    bool[] ex = new bool[3];
     int count = 0;
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,10 @@ public class GetAnswer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (ex[0] == true)
+        {
+            Input.onEndEdit.AddListener(ex2);
+        }
     }
 
     //zad1
@@ -62,6 +66,7 @@ public class GetAnswer : MonoBehaviour
             progressbar.value = 30;
             image.color = new Color(255, 255, 255, 255);
             a.Play("Congrats");
+            ex[0] = true;
         }
     }
 
@@ -86,5 +91,12 @@ public class GetAnswer : MonoBehaviour
             a.Play("Congrats");
         }
     }
+
+    //ex2
+    public void ex2(string arg0)
+    {
+        
+    }
+
 
 }

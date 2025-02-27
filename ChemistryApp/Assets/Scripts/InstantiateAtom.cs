@@ -6,6 +6,7 @@ using System;
 using System.Reflection;
 using System.Xml.Linq;
 using System.Linq;
+using UnityEngine.UI;
 
 public class InstantiateAtom : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class InstantiateAtom : MonoBehaviour
     List<Atom> atoms_Script;
 
     public TMP_InputField Input;
+
+    public TextMeshProUGUI reduckiq;
+    public Image bgRed;
+    public TextMeshProUGUI okislenie;
+    public Image bgOx;
 
 
     Dictionary<string, Dictionary<int, int>> AtomDict;
@@ -339,9 +345,42 @@ public class InstantiateAtom : MonoBehaviour
         string RightSide = $"{b} + {atoms_Script[0].NameForPresentation}<sup>0</sup>";
 
         text.text = LeftSide + " -> " + RightSide;
+        GetREDandOX(FindAtoms);
 
     }
     //for balancing both sides need to be equal
+
+    public void GetREDandOX(List<string> FindAtoms)
+    {
+        Atom RED;
+        Atom OX;
+        try
+        {
+            RED = Metals[(CheckElementsMetals(FindAtoms[0]))].GetComponent<Atom>();
+        }
+        catch
+        {
+            throw new Exception("Did not find RED with this index");
+        }
+
+        try
+        {
+            OX = Metals[(CheckElementsMetals(FindAtoms[2]))].GetComponent<Atom>();
+        }
+        catch
+        {
+            throw new Exception("Did not find OX with this index");
+        }
+
+        bgRed.gameObject.SetActive(true);
+        reduckiq.text =$"RED: {RED.NameForPresentation}<sup>{RED.Electrons}</sup> - {RED.Electrons}e<sup>-</sup> -> {RED.NameForPresentation}<sup>0</sup>";
+
+        bgOx.gameObject.SetActive(true);
+        okislenie.text = $"Ox: {OX.NameForPresentation}<sup>0</sup> + {OX.Electrons}e<sup>-</sup> -> {OX.NameForPresentation}<sup>{OX.Electrons}</sup>";
+
+
+    }
+
 
     List<int> Balance(int x, int y, int p, int q)
     {
