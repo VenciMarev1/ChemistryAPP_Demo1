@@ -7,8 +7,20 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PeriodicTableScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\TextBOX.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TextBOX.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Periodic Table Scripts\\Element.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Periodic Table Scripts\\Element.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Prefabs\\Periodic Table\\PeriodicTableScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Prefabs\\Periodic Table\\PeriodicTableScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\unlit_bg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\unlit_bg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Atom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Atom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\NewBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Periodic Table Scripts\\PeriodicTableScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Periodic Table Scripts\\PeriodicTableScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Prefabs\\Periodic Table\\PeriodicTableScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Prefabs\\Periodic Table\\PeriodicTableScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Periodic Table Scripts\\Element.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Periodic Table Scripts\\Element.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,20 +38,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TextBOX.cs",
-              "DocumentMoniker": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\TextBOX.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TextBOX.cs",
-              "ToolTip": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\TextBOX.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TextBOX.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwCQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Atom.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Atom.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Atom.cs",
+              "ToolTip": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Atom.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Atom.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAB8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T08:16:53.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T04:15:20.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "unlit_bg.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\unlit_bg.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\unlit_bg.cs",
+              "ToolTip": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\unlit_bg.cs",
+              "RelativeToolTip": "Assets\\Scripts\\unlit_bg.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T04:14:14.458Z"
             },
             {
               "$type": "Document",
@@ -57,14 +72,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PeriodicTableScript.cs",
               "ToolTip": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\PeriodicTableScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\PeriodicTableScript.cs",
-              "ViewState": "AgIAABcBAAAAAAAAAAAAADkBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABUBAAAAAAAAAAAuwGEBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-13T13:30:11.325Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "NewBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\NewBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NewBehaviourScript.cs",
@@ -76,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "PeriodicTableScript.cs",
               "DocumentMoniker": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Periodic Table Scripts\\PeriodicTableScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Periodic Table Scripts\\PeriodicTableScript.cs",
@@ -87,27 +102,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "PeriodicTableScript.cs",
               "DocumentMoniker": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Prefabs\\Periodic Table\\PeriodicTableScript.cs",
               "RelativeDocumentMoniker": "Assets\\Prefabs\\Periodic Table\\PeriodicTableScript.cs",
               "ToolTip": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Prefabs\\Periodic Table\\PeriodicTableScript.cs",
               "RelativeToolTip": "Assets\\Prefabs\\Periodic Table\\PeriodicTableScript.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T18:36:40.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Element.cs",
               "DocumentMoniker": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Periodic Table Scripts\\Element.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Periodic Table Scripts\\Element.cs",
               "ToolTip": "C:\\Users\\leo\\Documents\\GitHub\\ChemistryAPP_Demo1\\ChemistryApp\\Assets\\Scripts\\Periodic Table Scripts\\Element.cs",
               "RelativeToolTip": "Assets\\Scripts\\Periodic Table Scripts\\Element.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAIwHUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T14:51:19.385Z"
+              "WhenOpened": "2025-02-12T14:51:19.385Z",
+              "EditorCaption": ""
             }
           ]
         }
