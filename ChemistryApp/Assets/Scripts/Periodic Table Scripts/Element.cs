@@ -30,7 +30,8 @@ public class Element : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Element_Table.transform.localScale = new Vector3(1.6f, 1.6f, 1.6f);
+        
+        Element_Table.transform.localScale = new Vector3(3f, 3f, 3f);
         if(mousePressed)
         {
             //menu.rectTransform.anchoredPosition = new Vector3(995, 3, 0);
