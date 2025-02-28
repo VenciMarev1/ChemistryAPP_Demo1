@@ -114,12 +114,12 @@ public class InstantiateAtom : MonoBehaviour
             {
                 if (b.Value == 1 && b.Key > 0)
                 {
-                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation);
+                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + $"<sup>{pNames[getSpeacialName(a.Key, pNames)].Electrons}</sup>");
                     Coefficient.Add(1);
                 }
                 else if (b.Value != 1 && b.Key > 0 && !getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + $"<sub>{b.Value}</sub>");
+                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + $"<sup>{pNames[getSpeacialName(a.Key, pNames)].Electrons}</sup>" + $"<sub>{b.Value}</sub>");
                     Coefficient.Add(b.Value);
                 }
                 else if (b.Value != 1 && b.Key > 0 && getSpecialAtom(ElementsWithIndex, a.Key))
@@ -136,12 +136,12 @@ public class InstantiateAtom : MonoBehaviour
             {
                 if (b.Value == 1 && b.Key < 0)
                 {
-                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation);
+                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + $"<sup>{pNames[getSpeacialName(a.Key, pNames)].Electrons}</sup>");
                     Coefficient.Add(b.Value);
                 }
                 else if (b.Value != 1 && b.Key < 0 && !getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + $"<sub>{b.Value}</sub>");
+                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + $"<sup>{pNames[getSpeacialName(a.Key, pNames)].Electrons}</sup>" + $"<sub>{b.Value}</sub>");
                     Coefficient.Add(b.Value);
                 }
                 else if (b.Value != 1 && b.Key < 0 && getSpecialAtom(ElementsWithIndex, a.Key))
@@ -318,7 +318,16 @@ public class InstantiateAtom : MonoBehaviour
         int e2 = Math.Abs(atoms_Script[2].Electrons); // Second metal electrons
 
         // Calculate LCM of electrons to get balanced coefficients
-        List<int> balancedCoefficients = Balance(e1, e2);
+        List<Nullable<int>> balancedCoefficients = Balance(e1, e2);
+
+        for(int i = 0; i < balancedCoefficients.Count; i++)
+        {
+            if (balancedCoefficients[i] == 1)
+            {
+                balancedCoefficients[i] = null;
+            }
+        }
+
 
         string LeftSide = $"{balancedCoefficients[0]}{a} + {balancedCoefficients[1]}{atoms_Script[2].NameForPresentation}<sup>0</sup>";
         string RightSide = $"{balancedCoefficients[1]}{b} + {balancedCoefficients[0]}{atoms_Script[0].NameForPresentation}<sup>0</sup>";
@@ -329,19 +338,20 @@ public class InstantiateAtom : MonoBehaviour
         UpdateRedoxEquations(FindAtoms, balancedCoefficients);
     }
 
-    private void UpdateRedoxEquations(List<string> FindAtoms, List<int> coefficients)
+    private void UpdateRedoxEquations(List<string> FindAtoms, List<Nullable<int>> coefficients)
     {
         Atom RED = Metals[CheckElementsMetals(FindAtoms[0])].GetComponent<Atom>();
         Atom OX = Metals[CheckElementsMetals(FindAtoms[2])].GetComponent<Atom>();
 
+
         bgRed.gameObject.SetActive(true);
-        reduckiq.text = $"R: {coefficients[0]}{RED.NameForPresentation}<sup>{RED.Electrons}</sup> - {coefficients[0] * RED.Electrons}e<sup>-</sup> -> {coefficients[0]}{RED.NameForPresentation}<sup>0</sup>";
+        reduckiq.text = $"R: {coefficients[0]}{RED.NameForPresentation}<sup>{RED.Electrons}</sup> - {coefficients[0] +" "+ RED.Electrons}e<sup>-</sup> -> {coefficients[0]}{RED.NameForPresentation}<sup>0</sup>";
 
         bgOx.gameObject.SetActive(true);
-        okislenie.text = $"O: {coefficients[1]}{OX.NameForPresentation}<sup>0</sup> + {coefficients[1] * OX.Electrons}e<sup>-</sup> -> {coefficients[1]}{OX.NameForPresentation}<sup>{OX.Electrons}</sup>";
+        okislenie.text = $"O: {coefficients[1]}{OX.NameForPresentation}<sup>0</sup> + {coefficients[1] +" "+ OX.Electrons}e<sup>-</sup> -> {coefficients[1]}{OX.NameForPresentation}<sup>{OX.Electrons}</sup>";
     }
 
-    private List<int> Balance(int e1, int e2)
+    private List<Nullable<int>> Balance(int e1, int e2)
     {
         // e1 = electrons for first metal (reducing agent)
         // e2 = electrons for second metal (oxidizing agent)
@@ -362,6 +372,6 @@ public class InstantiateAtom : MonoBehaviour
         a /= finalGCD;
         b /= finalGCD;
 
-        return new List<int> { a, b };
+        return new List<Nullable<int>> { a, b };
     }
 }
