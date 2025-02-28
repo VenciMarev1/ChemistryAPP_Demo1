@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using System.Reflection;
-using System.Xml.Linq;
 using System.Linq;
 using UnityEngine.UI;
 
 public class InstantiateAtom : MonoBehaviour
 {
-   // public TMP_Dropdown optionMetal;
-   // public TMP_Dropdown optionNonMetal;
     public List<GameObject> Metals;
     public List<GameObject> NonMetals;
 
@@ -25,42 +21,37 @@ public class InstantiateAtom : MonoBehaviour
     public TextMeshProUGUI okislenie;
     public Image bgOx;
 
-
     Dictionary<string, Dictionary<int, int>> AtomDict;
 
     List<int> Coefficient;
 
     List<GameObject> Atoms;
-    // Start is called before the first frame update
+
+    List<string> ROAM = new List<string>() { "Li", "K", "Ba", "Ca", "Na", "Mg", "Al", "Zn", "Fe", "Ni", "Sn", "Pb", "H", "Cu", "Hg", "Ag", "Au" };
+
     void Start()
     {
         Input.onEndEdit.AddListener(SubmitRedox);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void InstantiateObject(int index)
     {
-        Instantiate(Metals[index],new Vector3(-3, Metals[index].transform.position.y, Metals[index].transform.position.z),Quaternion.identity);
+        Instantiate(Metals[index], new Vector3(-3, Metals[index].transform.position.y, Metals[index].transform.position.z), Quaternion.identity);
     }
-
-    #region
 
     public string SolveChemEqation(int Ion, int Anion)
     {
         List<GameObject> Atoms = new List<GameObject>();
         AtomDict = new Dictionary<string, Dictionary<int, int>>();
         List<Atom> AtomScript = new List<Atom>();
-        Coefficient =  new List<int>();
-        /* Anion = optionNonMetal.value;
-         Ion = optionMetal.value;*/
+        Coefficient = new List<int>();
 
-
-        //Checks for metals by their id and adds it to the list with metals
+        // Checks for metals by their id and adds it to the list with metals
         for (int i = 0; i < Metals.Count; i++)
         {
             if (i == Ion)
@@ -69,7 +60,7 @@ public class InstantiateAtom : MonoBehaviour
             }
         }
 
-        //Checks for non metals by their id and adds it to the list with Non metals
+        // Checks for non-metals by their id and adds it to the list with non-metals
         for (int i = 0; i < NonMetals.Count; i++)
         {
             if (i == Anion)
@@ -78,12 +69,11 @@ public class InstantiateAtom : MonoBehaviour
             }
         }
 
-        //Gets the script from the gameobject
+        // Gets the script from the gameobject
         for (int i = 0; i < Atoms.Count; i++)
         {
             AtomScript.Add(Atoms[i].GetComponent<Atom>());
         }
-
 
         if (AtomScript.Count >= 1)
         {
@@ -92,16 +82,16 @@ public class InstantiateAtom : MonoBehaviour
         else return "Null";
     }
 
-    private string ElementsLogic(List<Atom> atomScript, Dictionary<string, Dictionary<int,int>> AtomDict)
+    private string ElementsLogic(List<Atom> atomScript, Dictionary<string, Dictionary<int, int>> AtomDict)
     {
-        //preemption of the electrons/valency
+        // Preemption of the electrons/valency
         List<int> electrons = new List<int>();
         foreach (var a in atomScript)
         {
             electrons.Add(Math.Abs(a.Electrons));
         }
 
-        //Putting the information into the dictonary
+        // Putting the information into the dictionary
         for (int i = 0; i < atomScript.Count; i++)
         {
             Dictionary<int, int> valencyAndIndex = new Dictionary<int, int>();
@@ -109,76 +99,56 @@ public class InstantiateAtom : MonoBehaviour
             AtomDict.Add(atomScript[i].Name, valencyAndIndex);
         }
 
-        //printing onto the debug log
-        foreach (var a in AtomDict)
-        {
-            foreach (var b in a.Value)
-            {
-                //elInfo.Add(new ElementInfo(a.Key, b.Key * b.Value));
-               // Debug.Log("Name:" + a.Key + " Valency: " + b.Key + " Index: " + b.Value);
-            }
-        }
-
-
         return DisplayElement(AtomDict, atomScript);
-
     }
 
     private string DisplayElement(Dictionary<string, Dictionary<int, int>> AtomDict, List<Atom> pNames)
     {
-
         string Text = null;
-        List<string> ElementsWithIndex = new List<string>() { "OH", "SO<sub>3</sub>", "SO<sub>4</sub>", "NO<sub>3</sub>" };
-        List<string> mathc = new List<string>();
-        //Da se napravi da gi podrejda pravilno s indeksi s poveche ot 2 elementa.
-        text.text = "";
-
+        List<string> ElementsWithIndex = new List<string>() { "OH", "SO", "SO4", "NO" };
         List<string> names = new List<string>();
 
         foreach (var a in AtomDict)
         {
-            
             foreach (var b in a.Value)
             {
                 if (b.Value == 1 && b.Key > 0)
                 {
-                    names.Add(getSpeacialName(a.Key, pNames));
+                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation);
                     Coefficient.Add(1);
                 }
                 else if (b.Value != 1 && b.Key > 0 && !getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add(getSpeacialName(a.Key, pNames) + $"<sub>{b.Value}</sub>");
+                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + $"<sub>{b.Value}</sub>");
                     Coefficient.Add(b.Value);
                 }
                 else if (b.Value != 1 && b.Key > 0 && getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add("(" + getSpeacialName(a.Key, pNames) + ")" + $"<sub>{b.Value}</sub>");
+                    names.Add("(" + pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + ")" + $"<sup>{pNames[getSpeacialName(a.Key, pNames)].Electrons}</sup>" + $"<sub>{b.Value}</sub>");
                     Coefficient.Add(b.Value);
                 }
-
             }
         }
+
         foreach (var a in AtomDict)
         {
-
             foreach (var b in a.Value)
             {
                 if (b.Value == 1 && b.Key < 0)
                 {
-                    names.Add(getSpeacialName(a.Key, pNames));
+                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation);
                     Coefficient.Add(b.Value);
                 }
                 else if (b.Value != 1 && b.Key < 0 && !getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add(getSpeacialName(a.Key, pNames) + $"<sub>{b.Value}</sub>");
+                    names.Add(pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + $"<sub>{b.Value}</sub>");
                     Coefficient.Add(b.Value);
                 }
                 else if (b.Value != 1 && b.Key < 0 && getSpecialAtom(ElementsWithIndex, a.Key))
                 {
-                    names.Add("(" + getSpeacialName(a.Key, pNames) + ")" + $"<sub>{b.Value}</sub>");
+                    names.Add("(" + pNames[getSpeacialName(a.Key, pNames)].NameForPresentation + ")" + $"<sup>{pNames[getSpeacialName(a.Key, pNames)].Electrons}</sup>" + $"<sub>{b.Value}</sub>");
                     Coefficient.Add(b.Value);
                 }
-
             }
         }
 
@@ -187,10 +157,7 @@ public class InstantiateAtom : MonoBehaviour
             Text += a;
         }
 
-        Debug.Log(Text);
-
         return Text;
-
     }
 
     private bool getSpecialAtom(List<string> elements, string el)
@@ -205,18 +172,17 @@ public class InstantiateAtom : MonoBehaviour
         return false;
     }
 
-    private string getSpeacialName(string el, List<Atom> PNames)
+    private int getSpeacialName(string el, List<Atom> PNames)
     {
         foreach (var a in PNames)
         {
             if (el == a.Name)
             {
-                return a.NameForPresentation + $"<sup>{a.Electrons}</sup>";
+                return PNames.IndexOf(a);
             }
         }
-        return "No Matches";
+        return -1;
     }
-
 
     private int ValencyLogic(List<int> electrons, int el)
     {
@@ -236,13 +202,11 @@ public class InstantiateAtom : MonoBehaviour
         return a;
     }
 
-    // Function to calculate LCM of two numbers
     private int LCM(int a, int b)
     {
         return Math.Abs(a * b) / GCD(a, b);
     }
 
-    // Function to calculate LCM of multiple numbers
     private int FindLCM(List<int> numbers)
     {
         if (numbers.Count == 0)
@@ -255,11 +219,10 @@ public class InstantiateAtom : MonoBehaviour
         }
         return lcm;
     }
-#endregion
 
     private void SubmitRedox(string arg0)
     {
-        char[] things = {' ', '+'};
+        char[] things = { ' ', '+' };
         string[] atoms = arg0.Split(things);
 
         List<string> FindAtoms = new List<string>();
@@ -274,7 +237,7 @@ public class InstantiateAtom : MonoBehaviour
             }
         }
 
-        for(int i = 0; i < NonMetals.Count; i++)
+        for (int i = 0; i < NonMetals.Count; i++)
         {
             string name = NonMetals[i].GetComponent<Atom>().Name;
             if (atoms[0].Contains(name))
@@ -306,12 +269,20 @@ public class InstantiateAtom : MonoBehaviour
                 }
             }
         }
-        SomeLogic(FindAtoms);
+
+        if (ROAM.IndexOf(FindAtoms[0]) < ROAM.IndexOf(FindAtoms[2]))
+        {
+            BalanceChemicalEquation(FindAtoms);
+        }
+        else
+        {
+            text.text = "The reaction is impossible";
+        }
     }
 
     public int CheckElementsMetals(string Element)
     {
-        for(int i = 0; i < Metals.Count; i ++)
+        for (int i = 0; i < Metals.Count; i++)
         {
             if (Metals[i].GetComponent<Atom>().Name == Element)
             {
@@ -335,83 +306,62 @@ public class InstantiateAtom : MonoBehaviour
         return -1;
     }
 
-    private void SomeLogic(List<string> FindAtoms)
+    private void BalanceChemicalEquation(List<string> FindAtoms)
     {
 
+        // Update the text display with balanced equation
         string a = SolveChemEqation(CheckElementsMetals(FindAtoms[0]), CheckElementsNonMetals(FindAtoms[1]));
         string b = SolveChemEqation(CheckElementsMetals(FindAtoms[2]), CheckElementsNonMetals(FindAtoms[1]));
 
-        string LeftSide = $"{a} + {atoms_Script[2].NameForPresentation}<sup>0</sup>";
-        string RightSide = $"{b} + {atoms_Script[0].NameForPresentation}<sup>0</sup>";
+        // Get the electrons involved in the reaction
+        int e1 = Math.Abs(atoms_Script[0].Electrons); // First metal electrons
+        int e2 = Math.Abs(atoms_Script[2].Electrons); // Second metal electrons
+
+        // Calculate LCM of electrons to get balanced coefficients
+        List<int> balancedCoefficients = Balance(e1, e2);
+
+        string LeftSide = $"{balancedCoefficients[0]}{a} + {balancedCoefficients[1]}{atoms_Script[2].NameForPresentation}<sup>0</sup>";
+        string RightSide = $"{balancedCoefficients[1]}{b} + {balancedCoefficients[0]}{atoms_Script[0].NameForPresentation}<sup>0</sup>";
 
         text.text = LeftSide + " -> " + RightSide;
-        GetREDandOX(FindAtoms);
 
+        // Update redox equations with balanced coefficients
+        UpdateRedoxEquations(FindAtoms, balancedCoefficients);
     }
-    //for balancing both sides need to be equal
 
-    public void GetREDandOX(List<string> FindAtoms)
+    private void UpdateRedoxEquations(List<string> FindAtoms, List<int> coefficients)
     {
-        Atom RED;
-        Atom OX;
-        try
-        {
-            RED = Metals[(CheckElementsMetals(FindAtoms[0]))].GetComponent<Atom>();
-        }
-        catch
-        {
-            throw new Exception("Did not find RED with this index");
-        }
-
-        try
-        {
-            OX = Metals[(CheckElementsMetals(FindAtoms[2]))].GetComponent<Atom>();
-        }
-        catch
-        {
-            throw new Exception("Did not find OX with this index");
-        }
+        Atom RED = Metals[CheckElementsMetals(FindAtoms[0])].GetComponent<Atom>();
+        Atom OX = Metals[CheckElementsMetals(FindAtoms[2])].GetComponent<Atom>();
 
         bgRed.gameObject.SetActive(true);
-        reduckiq.text =$"RED: {RED.NameForPresentation}<sup>{RED.Electrons}</sup> - {RED.Electrons}e<sup>-</sup> -> {RED.NameForPresentation}<sup>0</sup>";
+        reduckiq.text = $"R: {coefficients[0]}{RED.NameForPresentation}<sup>{RED.Electrons}</sup> - {coefficients[0] * RED.Electrons}e<sup>-</sup> -> {coefficients[0]}{RED.NameForPresentation}<sup>0</sup>";
 
         bgOx.gameObject.SetActive(true);
-        okislenie.text = $"Ox: {OX.NameForPresentation}<sup>0</sup> + {OX.Electrons}e<sup>-</sup> -> {OX.NameForPresentation}<sup>{OX.Electrons}</sup>";
-
-
+        okislenie.text = $"O: {coefficients[1]}{OX.NameForPresentation}<sup>0</sup> + {coefficients[1] * OX.Electrons}e<sup>-</sup> -> {coefficients[1]}{OX.NameForPresentation}<sup>{OX.Electrons}</sup>";
     }
 
-
-    List<int> Balance(int x, int y, int p, int q)
+    private List<int> Balance(int e1, int e2)
     {
-        int a, b, c;
+        // e1 = electrons for first metal (reducing agent)
+        // e2 = electrons for second metal (oxidizing agent)
 
-        if (p % x == 0 && q % y == 0)
-        {
-            a = p / x;
-            b = q / x;
-            c = 1;
-        }
-        else
-        {
-            p = p * x;
-            q = q * x;
-            c = x * y;
+        // Step 1: Calculate number of electrons transferred
+        int electronsGiven = Math.Abs(e1);    // electrons given by reducing agent
+        int electronsAccepted = Math.Abs(e2); // electrons accepted by oxidizing agent
 
-            int temp = GCD(p, GCD(q, c));
+        // Step 2: Find LCM to ensure electron transfer balance
+        int electronLCM = LCM(electronsGiven, electronsAccepted);
 
-            a = p / temp;
-            b = q / temp;
-            c = c / temp;
+        // Step 3: Calculate initial coefficients
+        int a = electronLCM / electronsGiven;    // coefficient for reducing agent
+        int b = electronLCM / electronsAccepted; // coefficient for oxidizing agent
 
-        }
+        // Step 4: Simplify final coefficients
+        int finalGCD = GCD(a, b);
+        a /= finalGCD;
+        b /= finalGCD;
 
-        List<int> tmp = new List<int>();
-        tmp.Add(a);
-        tmp.Add(b);
-        tmp.Add(c);
-
-        return tmp;
-
+        return new List<int> { a, b };
     }
 }
