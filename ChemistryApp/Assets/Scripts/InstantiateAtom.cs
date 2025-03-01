@@ -270,7 +270,7 @@ public class InstantiateAtom : MonoBehaviour
             }
         }
 
-        if (ROAM.IndexOf(FindAtoms[0]) < ROAM.IndexOf(FindAtoms[2]))
+        if (ROAM.IndexOf(FindAtoms[0]) > ROAM.IndexOf(FindAtoms[2]))
         {
             BalanceChemicalEquation(FindAtoms);
         }
