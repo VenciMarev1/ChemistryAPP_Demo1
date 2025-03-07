@@ -22,11 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-<<<<<<< HEAD
-55720
-=======
-50543
->>>>>>> Vencis_branch
+50070
 Successfully changed project path to: /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp
 /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -60,26 +56,14 @@ Successfully changed project path to: /Users/vencimarev/Documents/GitHub/Chemist
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8336001088]  Target information:
+Player connection [8610400320]  Target information:
 
-<<<<<<< HEAD
-Player connection [8624932928]  * "[IP] 172.16.3.2 [Port] 0 [Flags] 2 [Guid] 815667452 [EditorId] 815667452 [Version] 1048832 [Id] OSXEditor(0,Vencis-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
-=======
-Player connection [8336001088]  * "[IP] 192.168.20.116 [Port] 0 [Flags] 2 [Guid] 4087332308 [EditorId] 4087332308 [Version] 1048832 [Id] OSXEditor(0,Vencis-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
->>>>>>> Vencis_branch
+Player connection [8610400320]  * "[IP] 192.168.0.110 [Port] 0 [Flags] 2 [Guid] 4144387739 [EditorId] 4144387739 [Version] 1048832 [Id] OSXEditor(0,Vencis-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
-Player connection [8336001088]  * "[IP] 10.211.55.2 [Port] 0 [Flags] 2 [Guid] 4087332308 [EditorId] 4087332308 [Version] 1048832 [Id] OSXEditor(0,Vencis-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
-
-Player connection [8336001088]  * "[IP] 10.37.129.2 [Port] 0 [Flags] 2 [Guid] 4087332308 [EditorId] 4087332308 [Version] 1048832 [Id] OSXEditor(0,Vencis-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
-
-Player connection [8336001088] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [8336001088] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8610400320] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8610400320] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-<<<<<<< HEAD
-Refreshing native plugins compatible for Editor in 4.02 ms, found 2 plugins.
-=======
-Refreshing native plugins compatible for Editor in 17.41 ms, found 2 plugins.
->>>>>>> Vencis_branch
+Refreshing native plugins compatible for Editor in 11.84 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.54f1 (129125d4e700)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.54f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -94,88 +78,71 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.54f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.54f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2022.3.54f1/Unity.app/Contents/MonoBleedingEdge/etc'
-<<<<<<< HEAD
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56683
-=======
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56355
->>>>>>> Vencis_branch
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56483
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.54f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-<<<<<<< HEAD
-Registered in 0.002752 seconds.
-- Loaded All Assemblies, in  0.260 seconds
-=======
-Registered in 0.004617 seconds.
-- Loaded All Assemblies, in  0.474 seconds
->>>>>>> Vencis_branch
+Registered in 0.003699 seconds.
+- Loaded All Assemblies, in  0.238 seconds
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
+We weren't able to parse search user settings at /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings) at line 11: Error consuming: =
+
+scopes = {
+
+  at UnityEditor.SJSON.Load (System.String path) [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/SJSON.bindings.cs:35 
+  at UnityEditor.Search.SearchSettingsStorage.Load () [0x00004] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:222 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Search.SearchSettingsStorage:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:226)
+UnityEditor.Search.SearchSettings:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:753)
+UnityEditor.Search.SearchSettings:set_settingsStorage (UnityEditor.Search.SearchSettingsStorage) (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:585)
+UnityEditor.Search.SearchSettings:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:737)
+UnityEditor.Search.CustomIndexers:RefreshCustomIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:142)
+UnityEditor.Search.CustomIndexers:LoadCustomObjectIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:181)
+UnityEditor.Search.CustomIndexers:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:106)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:119)
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs Line: 226)
+
 Mono: successfully reloaded assembly
-<<<<<<< HEAD
-- Finished resetting the current domain, in  0.171 seconds
-Domain Reload Profiling: 431ms
-	BeginReloadAssembly (85ms)
-=======
-- Finished resetting the current domain, in  0.312 seconds
-Domain Reload Profiling: 786ms
-	BeginReloadAssembly (133ms)
->>>>>>> Vencis_branch
+- Finished resetting the current domain, in  0.167 seconds
+Domain Reload Profiling: 405ms
+	BeginReloadAssembly (75ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-<<<<<<< HEAD
 		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (24ms)
+	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (110ms)
-		LoadAssemblies (86ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (100ms)
+		LoadAssemblies (76ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (107ms)
-			TypeCache.Refresh (106ms)
-				TypeCache.ScanAssembly (96ms)
+		AnalyzeDomain (98ms)
+			TypeCache.Refresh (97ms)
+				TypeCache.ScanAssembly (87ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (171ms)
+	FinalizeReload (167ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (138ms)
-=======
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (50ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (69ms)
-	LoadAllAssembliesAndSetupDomain (205ms)
-		LoadAssemblies (132ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (203ms)
-			TypeCache.Refresh (202ms)
-				TypeCache.ScanAssembly (180ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (312ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (255ms)
->>>>>>> Vencis_branch
+		SetupLoadedEditorAssemblies (134ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-<<<<<<< HEAD
 			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (98ms)
-			ProcessInitializeOnLoadMethodAttributes (28ms)
-=======
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (183ms)
-			ProcessInitializeOnLoadMethodAttributes (49ms)
->>>>>>> Vencis_branch
+			ProcessInitializeOnLoadAttributes (91ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -184,19 +151,37 @@ Domain Reload Profiling: 786ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-<<<<<<< HEAD
-- Loaded All Assemblies, in  0.414 seconds
-=======
-- Loaded All Assemblies, in  0.703 seconds
->>>>>>> Vencis_branch
+- Loaded All Assemblies, in  0.443 seconds
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
+We weren't able to parse search user settings at /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings) at line 11: Error consuming: =
+
+scopes = {
+
+  at UnityEditor.SJSON.Load (System.String path) [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/SJSON.bindings.cs:35 
+  at UnityEditor.Search.SearchSettingsStorage.Load () [0x00004] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:222 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Search.SearchSettingsStorage:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:226)
+UnityEditor.Search.SearchSettings:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:753)
+UnityEditor.Search.SearchSettings:set_settingsStorage (UnityEditor.Search.SearchSettingsStorage) (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:585)
+UnityEditor.Search.SearchSettings:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:737)
+UnityEditor.Search.CustomIndexers:RefreshCustomIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:142)
+UnityEditor.Search.CustomIndexers:LoadCustomObjectIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:181)
+UnityEditor.Search.CustomIndexers:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:106)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:119)
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs Line: 226)
+
 Mono: successfully reloaded assembly
-<<<<<<< HEAD
-- Finished resetting the current domain, in  0.467 seconds
-Domain Reload Profiling: 881ms
-	BeginReloadAssembly (87ms)
+- Finished resetting the current domain, in  0.500 seconds
+Domain Reload Profiling: 943ms
+	BeginReloadAssembly (94ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
@@ -204,80 +189,38 @@ Domain Reload Profiling: 881ms
 		CreateAndSetChildDomain (24ms)
 	RebuildCommonClasses (24ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (23ms)
-	LoadAllAssembliesAndSetupDomain (273ms)
-		LoadAssemblies (191ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (295ms)
+		LoadAssemblies (207ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (120ms)
-			TypeCache.Refresh (109ms)
+		AnalyzeDomain (130ms)
+			TypeCache.Refresh (119ms)
 				TypeCache.ScanAssembly (98ms)
-			ScanForSourceGeneratedMonoScriptInfo (7ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (467ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (500ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (382ms)
+		SetupLoadedEditorAssemblies (407ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (4ms)
 			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (33ms)
-			ProcessInitializeOnLoadAttributes (331ms)
+			BeforeProcessingInitializeOnLoad (42ms)
+			ProcessInitializeOnLoadAttributes (347ms)
 			ProcessInitializeOnLoadMethodAttributes (12ms)
-=======
-- Finished resetting the current domain, in  0.947 seconds
-Domain Reload Profiling: 1657ms
-	BeginReloadAssembly (159ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (42ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (457ms)
-		LoadAssemblies (287ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (223ms)
-			TypeCache.Refresh (203ms)
-				TypeCache.ScanAssembly (175ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (948ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (782ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (75ms)
-			ProcessInitializeOnLoadAttributes (671ms)
-			ProcessInitializeOnLoadMethodAttributes (22ms)
->>>>>>> Vencis_branch
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
 Launching external process: /Applications/Unity/Hub/Editor/2022.3.54f1/Unity.app/Contents/Tools/UnityShaderCompiler
-<<<<<<< HEAD
-Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
-Refreshing native plugins compatible for Editor in 2.05 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3156 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 19 unused Assets / (48.7 KB). Loaded Objects now: 3624.
-Memory consumption went from 132.6 MB to 132.5 MB.
-Total: 2.817541 ms (FindLiveObjects: 0.174250 ms CreateObjectMapping: 0.042250 ms MarkObjects: 2.518792 ms  DeleteObjects: 0.081500 ms)
-=======
-Launched and connected shader compiler UnityShaderCompiler after 0.35 seconds
-Refreshing native plugins compatible for Editor in 2.20 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3193 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 19 unused Assets / (48.7 KB). Loaded Objects now: 3662.
-Memory consumption went from 137.7 MB to 137.7 MB.
-Total: 5.296958 ms (FindLiveObjects: 0.329541 ms CreateObjectMapping: 0.063459 ms MarkObjects: 4.468000 ms  DeleteObjects: 0.435042 ms)
->>>>>>> Vencis_branch
+Unloading 3195 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (48.7 KB). Loaded Objects now: 3664.
+Memory consumption went from 137.9 MB to 137.9 MB.
+Total: 2.806375 ms (FindLiveObjects: 0.122792 ms CreateObjectMapping: 0.044584 ms MarkObjects: 2.547375 ms  DeleteObjects: 0.090667 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -292,58 +235,32 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-<<<<<<< HEAD
-=======
+========================================================================
+Received Import Request.
+  Time since last request: 1888.502234 seconds.
+  path: Assets/Scenes/Level Redox.unity
+  artifactKey: Guid(25bbab54baf4340e6a3ce4b66a85ffab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level Redox.unity using Guid(25bbab54baf4340e6a3ce4b66a85ffab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '1983fa5969e033c97cb803fafa692161') in 0.001986 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.270720 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '15d72d67c6a1e316dbd623610159b4b1') in 0.000400 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-Thread 0x16effb000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.626 seconds
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.087 seconds
-Domain Reload Profiling: 1715ms
-	BeginReloadAssembly (148ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (64ms)
-	RebuildCommonClasses (30ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (22ms)
-	LoadAllAssembliesAndSetupDomain (418ms)
-		LoadAssemblies (406ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (60ms)
-			TypeCache.Refresh (37ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (21ms)
-	FinalizeReload (1088ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (463ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (47ms)
-			ProcessInitializeOnLoadAttributes (384ms)
-			ProcessInitializeOnLoadMethodAttributes (18ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (3ms)
-Refreshing native plugins compatible for Editor in 2.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3173 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 14 unused Assets / (28.5 KB). Loaded Objects now: 3665.
-Memory consumption went from 145.4 MB to 145.4 MB.
-Total: 6.878167 ms (FindLiveObjects: 0.225292 ms CreateObjectMapping: 0.061000 ms MarkObjects: 6.448542 ms  DeleteObjects: 0.142250 ms)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (0.9 KB). Loaded Objects now: 3664.
+Memory consumption went from 83.8 MB to 83.8 MB.
+Total: 15.746083 ms (FindLiveObjects: 0.165292 ms CreateObjectMapping: 0.040875 ms MarkObjects: 15.495166 ms  DeleteObjects: 0.044208 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -363,52 +280,186 @@ AssetImportParameters requested are different than current active one (requested
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-Thread 0x16f887000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.402 seconds
+Thread 0x312887000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.423 seconds
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
+We weren't able to parse search user settings at /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings) at line 11: Error consuming: =
+
+scopes = {
+
+  at UnityEditor.SJSON.Load (System.String path) [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/SJSON.bindings.cs:35 
+  at UnityEditor.Search.SearchSettingsStorage.Load () [0x00004] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:222 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Search.SearchSettingsStorage:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:226)
+UnityEditor.Search.SearchSettings:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:753)
+UnityEditor.Search.SearchSettings:set_settingsStorage (UnityEditor.Search.SearchSettingsStorage) (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:585)
+UnityEditor.Search.SearchSettings:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:737)
+UnityEditor.Search.CustomIndexers:RefreshCustomIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:142)
+UnityEditor.Search.CustomIndexers:LoadCustomObjectIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:181)
+UnityEditor.Search.CustomIndexers:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:106)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:119)
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs Line: 226)
+
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.952 seconds
-Domain Reload Profiling: 1354ms
-	BeginReloadAssembly (113ms)
+- Finished resetting the current domain, in  0.948 seconds
+Domain Reload Profiling: 1371ms
+	BeginReloadAssembly (138ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (44ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (212ms)
-		LoadAssemblies (231ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (211ms)
+		LoadAssemblies (252ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (21ms)
-			TypeCache.Refresh (15ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (16ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (953ms)
+	FinalizeReload (949ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (445ms)
+		SetupLoadedEditorAssemblies (451ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
+			InitializePlatformSupportModulesInManaged (5ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (46ms)
-			ProcessInitializeOnLoadAttributes (374ms)
+			BeforeProcessingInitializeOnLoad (47ms)
+			ProcessInitializeOnLoadAttributes (378ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 2.24 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3175 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 14 unused Assets / (28.5 KB). Loaded Objects now: 3667.
+Memory consumption went from 145.3 MB to 145.3 MB.
+Total: 4.081541 ms (FindLiveObjects: 0.134542 ms CreateObjectMapping: 0.042333 ms MarkObjects: 3.828458 ms  DeleteObjects: 0.075625 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (3.0 KB). Loaded Objects now: 3667.
+Memory consumption went from 95.8 MB to 95.7 MB.
+Total: 12.393084 ms (FindLiveObjects: 0.172500 ms CreateObjectMapping: 0.039917 ms MarkObjects: 12.134625 ms  DeleteObjects: 0.045542 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Thread 0x312887000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.333 seconds
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+We weren't able to parse search user settings at /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings) at line 11: Error consuming: =
+
+scopes = {
+
+  at UnityEditor.SJSON.Load (System.String path) [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/SJSON.bindings.cs:35 
+  at UnityEditor.Search.SearchSettingsStorage.Load () [0x00004] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:222 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Search.SearchSettingsStorage:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:226)
+UnityEditor.Search.SearchSettings:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:753)
+UnityEditor.Search.SearchSettings:set_settingsStorage (UnityEditor.Search.SearchSettingsStorage) (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:585)
+UnityEditor.Search.SearchSettings:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:737)
+UnityEditor.Search.CustomIndexers:RefreshCustomIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:142)
+UnityEditor.Search.CustomIndexers:LoadCustomObjectIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:181)
+UnityEditor.Search.CustomIndexers:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:106)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:119)
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs Line: 226)
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.914 seconds
+Domain Reload Profiling: 1248ms
+	BeginReloadAssembly (118ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (168ms)
+		LoadAssemblies (212ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (13ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (915ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (428ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (45ms)
+			ProcessInitializeOnLoadAttributes (362ms)
 			ProcessInitializeOnLoadMethodAttributes (14ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (3ms)
-Refreshing native plugins compatible for Editor in 2.06 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 2.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3173 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 14 unused Assets / (28.5 KB). Loaded Objects now: 3668.
-Memory consumption went from 156.8 MB to 156.8 MB.
-Total: 2.888125 ms (FindLiveObjects: 0.112125 ms CreateObjectMapping: 0.042500 ms MarkObjects: 2.643792 ms  DeleteObjects: 0.088625 ms)
+Unloading 3175 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 14 unused Assets / (28.5 KB). Loaded Objects now: 3670.
+Memory consumption went from 156.6 MB to 156.6 MB.
+Total: 3.650083 ms (FindLiveObjects: 0.236792 ms CreateObjectMapping: 0.056542 ms MarkObjects: 3.291875 ms  DeleteObjects: 0.063542 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -424,4 +475,313 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
->>>>>>> Vencis_branch
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Thread 0x312887000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.253 seconds
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+We weren't able to parse search user settings at /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings) at line 11: Error consuming: =
+
+scopes = {
+
+  at UnityEditor.SJSON.Load (System.String path) [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/SJSON.bindings.cs:35 
+  at UnityEditor.Search.SearchSettingsStorage.Load () [0x00004] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:222 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Search.SearchSettingsStorage:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:226)
+UnityEditor.Search.SearchSettings:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:753)
+UnityEditor.Search.SearchSettings:set_settingsStorage (UnityEditor.Search.SearchSettingsStorage) (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:585)
+UnityEditor.Search.SearchSettings:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:737)
+UnityEditor.Search.CustomIndexers:RefreshCustomIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:142)
+UnityEditor.Search.CustomIndexers:LoadCustomObjectIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:181)
+UnityEditor.Search.CustomIndexers:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:106)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:119)
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs Line: 226)
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.863 seconds
+Domain Reload Profiling: 1116ms
+	BeginReloadAssembly (80ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (13ms)
+	LoadAllAssembliesAndSetupDomain (128ms)
+		LoadAssemblies (144ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (863ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (424ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (44ms)
+			ProcessInitializeOnLoadAttributes (358ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3175 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 14 unused Assets / (28.5 KB). Loaded Objects now: 3673.
+Memory consumption went from 168.3 MB to 168.2 MB.
+Total: 3.833042 ms (FindLiveObjects: 0.252209 ms CreateObjectMapping: 0.054750 ms MarkObjects: 3.453708 ms  DeleteObjects: 0.070625 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Thread 0x312887000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.298 seconds
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+We weren't able to parse search user settings at /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings) at line 11: Error consuming: =
+
+scopes = {
+
+  at UnityEditor.SJSON.Load (System.String path) [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/SJSON.bindings.cs:35 
+  at UnityEditor.Search.SearchSettingsStorage.Load () [0x00004] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:222 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Search.SearchSettingsStorage:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:226)
+UnityEditor.Search.SearchSettings:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:753)
+UnityEditor.Search.SearchSettings:set_settingsStorage (UnityEditor.Search.SearchSettingsStorage) (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:585)
+UnityEditor.Search.SearchSettings:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:737)
+UnityEditor.Search.CustomIndexers:RefreshCustomIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:142)
+UnityEditor.Search.CustomIndexers:LoadCustomObjectIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:181)
+UnityEditor.Search.CustomIndexers:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:106)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:119)
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs Line: 226)
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.868 seconds
+Domain Reload Profiling: 1167ms
+	BeginReloadAssembly (88ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (14ms)
+	LoadAllAssembliesAndSetupDomain (165ms)
+		LoadAssemblies (180ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (868ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (426ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (45ms)
+			ProcessInitializeOnLoadAttributes (359ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3175 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 14 unused Assets / (28.6 KB). Loaded Objects now: 3676.
+Memory consumption went from 179.9 MB to 179.9 MB.
+Total: 3.164000 ms (FindLiveObjects: 0.160542 ms CreateObjectMapping: 0.046458 ms MarkObjects: 2.905833 ms  DeleteObjects: 0.050417 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Thread 0x312887000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.409 seconds
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+We weren't able to parse search user settings at /Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (/Users/vencimarev/Documents/GitHub/ChemistryAPP_Demo1/ChemistryApp/UserSettings/Search.settings) at line 11: Error consuming: =
+
+scopes = {
+
+  at UnityEditor.SJSON.Load (System.String path) [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/SJSON.bindings.cs:35 
+  at UnityEditor.Search.SearchSettingsStorage.Load () [0x00004] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:222 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Search.SearchSettingsStorage:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:226)
+UnityEditor.Search.SearchSettings:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:753)
+UnityEditor.Search.SearchSettings:set_settingsStorage (UnityEditor.Search.SearchSettingsStorage) (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:585)
+UnityEditor.Search.SearchSettings:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:737)
+UnityEditor.Search.CustomIndexers:RefreshCustomIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:142)
+UnityEditor.Search.CustomIndexers:LoadCustomObjectIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:181)
+UnityEditor.Search.CustomIndexers:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:106)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:119)
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs Line: 226)
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.011 seconds
+Domain Reload Profiling: 1421ms
+	BeginReloadAssembly (132ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (213ms)
+		LoadAssemblies (255ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (20ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1012ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (452ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (47ms)
+			ProcessInitializeOnLoadAttributes (382ms)
+			ProcessInitializeOnLoadMethodAttributes (14ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 1.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3175 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 14 unused Assets / (28.6 KB). Loaded Objects now: 3679.
+Memory consumption went from 191.6 MB to 191.6 MB.
+Total: 4.233541 ms (FindLiveObjects: 0.342709 ms CreateObjectMapping: 0.074583 ms MarkObjects: 3.678500 ms  DeleteObjects: 0.136916 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.97 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (3.0 KB). Loaded Objects now: 3679.
+Memory consumption went from 142.1 MB to 142.1 MB.
+Total: 11.399500 ms (FindLiveObjects: 0.216875 ms CreateObjectMapping: 0.041209 ms MarkObjects: 11.102583 ms  DeleteObjects: 0.038417 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (3.0 KB). Loaded Objects now: 3679.
+Memory consumption went from 141.2 MB to 141.2 MB.
+Total: 48.966042 ms (FindLiveObjects: 0.505875 ms CreateObjectMapping: 0.039917 ms MarkObjects: 48.305792 ms  DeleteObjects: 0.113500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
