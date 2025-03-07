@@ -57,7 +57,7 @@ public class PeriodicTableLayout : MonoBehaviour
         "Transition metals",     // 27 - Cobalt
         "Transition metals",     // 28 - Nickel
         "Transition metals",     // 29 - Copper
-        "Post-transition metals",// 30 - Zinc
+        "Transition metals",     // 30 - Zinc
         "Post-transition metals",// 31 - Gallium
         "Metalloids",            // 32 - Germanium
         "Metalloids",            // 33 - Arsenic
@@ -75,7 +75,7 @@ public class PeriodicTableLayout : MonoBehaviour
         "Transition metals",     // 45 - Rhodium
         "Transition metals",     // 46 - Palladium
         "Transition metals",     // 47 - Silver
-        "Post-transition metals",// 48 - Cadmium
+        "Transition metals",     // 48 - Cadmium
         "Post-transition metals",// 49 - Indium
         "Post-transition metals",// 50 - Tin
         "Metalloids",            // 51 - Antimony
@@ -84,7 +84,7 @@ public class PeriodicTableLayout : MonoBehaviour
         "Noble gases",           // 54 - Xenon
         "Alkali metals",         // 55 - Cesium
         "Alkaline earth metals", // 56 - Barium
-        "Transition metals",     // 57 - Lanthanum
+        "Lanthanides",           // 57 - Lanthanum
         "Lanthanides",           // 58 - Cerium
         "Lanthanides",           // 59 - Praseodymium
         "Lanthanides",           // 60 - Neodymium
@@ -106,17 +106,17 @@ public class PeriodicTableLayout : MonoBehaviour
         "Transition metals",     // 76 - Osmium
         "Transition metals",     // 77 - Iridium
         "Transition metals",     // 78 - Platinum
-        "Post-transition metals",// 79 - Gold
-        "Post-transition metals",// 80 - Mercury
+        "Transition metals",     // 79 - Gold
+        "Transition metals",     // 80 - Mercury
         "Post-transition metals",// 81 - Thallium
         "Post-transition metals",// 82 - Lead
         "Post-transition metals",// 83 - Bismuth
         "Post-transition metals",// 84 - Polonium
-        "Noble gases",           // 85 - Astatine
+        "Post-transition metals",// 85 - Astatine
         "Noble gases",           // 86 - Radon
         "Alkali metals",         // 87 - Francium
         "Alkaline earth metals", // 88 - Radium
-        "Transition metals",     // 89 - Actinium
+        "Actinides",             // 89 - Actinium
         "Actinides",             // 90 - Thorium
         "Actinides",             // 91 - Protactinium
         "Actinides",             // 92 - Uranium
@@ -148,27 +148,168 @@ public class PeriodicTableLayout : MonoBehaviour
         "Unknown properties"     // 118 - Oganesson
     };
 
+    // Add additional data for each element
+    private ElementData[] elementData = new ElementData[]
+{
+    new ElementData("Hydrogen", "H", 1, 1.008f, "Reactive non-metals", -259.16f, -252.87f, 1766),
+    new ElementData("Helium", "He", 2, 4.0026f, "Noble gases", -272.2f, -268.93f, 1895),
+    new ElementData("Lithium", "Li", 3, 6.94f, "Alkali metals", 180.54f, 1342f, 1817),
+    new ElementData("Beryllium", "Be", 4, 9.0122f, "Alkaline earth metals", 1287f, 2469f, 1798),
+    new ElementData("Boron", "B", 5, 10.81f, "Metalloids", 2076f, 3927f, 1808),
+    new ElementData("Carbon", "C", 6, 12.011f, "Reactive non-metals", 3550f, 4827f, -1),
+    new ElementData("Nitrogen", "N", 7, 14.007f, "Reactive non-metals", -210.1f, -195.8f, 1772),
+    new ElementData("Oxygen", "O", 8, 15.999f, "Reactive non-metals", -218.79f, -182.96f, 1774),
+    new ElementData("Fluorine", "F", 9, 18.998f, "Reactive non-metals", -219.67f, -188.12f, 1886),
+    new ElementData("Neon", "Ne", 10, 20.180f, "Noble gases", -248.59f, -246.08f, 1898),
+    new ElementData("Sodium", "Na", 11, 22.990f, "Alkali metals", 97.72f, 883f, 1807),
+    new ElementData("Magnesium", "Mg", 12, 24.305f, "Alkaline earth metals", 650f, 1090f, 1755),
+    new ElementData("Aluminium", "Al", 13, 26.982f, "Post-transition metals", 660.32f, 2519f, 1825),
+    new ElementData("Silicon", "Si", 14, 28.085f, "Metalloids", 1414f, 3265f, 1824),
+    new ElementData("Phosphorus", "P", 15, 30.974f, "Reactive non-metals", 44.15f, 280.5f, 1669),
+    new ElementData("Sulfur", "S", 16, 32.06f, "Reactive non-metals", 115.21f, 444.6f, -1),
+    new ElementData("Chlorine", "Cl", 17, 35.45f, "Reactive non-metals", -101.5f, -34.04f, 1774),
+    new ElementData("Argon", "Ar", 18, 39.948f, "Noble gases", -189.34f, -185.85f, 1894),
+    new ElementData("Potassium", "K", 19, 39.098f, "Alkali metals", 63.5f, 759f, 1807),
+    new ElementData("Calcium", "Ca", 20, 40.078f, "Alkaline earth metals", 842f, 1484f, 1808),
+    new ElementData("Scandium", "Sc", 21, 44.956f, "Transition metals", 1541f, 2830f, 1879),
+    new ElementData("Titanium", "Ti", 22, 47.867f, "Transition metals", 1668f, 3287f, 1791),
+    new ElementData("Vanadium", "V", 23, 50.942f, "Transition metals", 1910f, 3407f, 1801),
+    new ElementData("Chromium", "Cr", 24, 51.996f, "Transition metals", 1907f, 2671f, 1797),
+    new ElementData("Manganese", "Mn", 25, 54.938f, "Transition metals", 1246f, 2061f, 1774),
+    new ElementData("Iron", "Fe", 26, 55.845f, "Transition metals", 1538f, 2862f, -1),
+    new ElementData("Cobalt", "Co", 27, 58.933f, "Transition metals", 1495f, 2927f, 1735),
+    new ElementData("Nickel", "Ni", 28, 58.693f, "Transition metals", 1455f, 2730f, 1751),
+    new ElementData("Copper", "Cu", 29, 63.546f, "Transition metals", 1084.62f, 2562f, -1),
+    new ElementData("Zinc", "Zn", 30, 65.38f, "Transition metals", 419.53f, 907f, 1746),
+    new ElementData("Gallium", "Ga", 31, 69.723f, "Post-transition metals", 29.76f, 2204f, 1875),
+    new ElementData("Germanium", "Ge", 32, 72.63f, "Metalloids", 938.25f, 2833f, 1886),
+    new ElementData("Arsenic", "As", 33, 74.922f, "Metalloids", 817f, 614f, -1),
+    new ElementData("Selenium", "Se", 34, 78.971f, "Reactive non-metals", 221f, 685f, 1817),
+    new ElementData("Bromine", "Br", 35, 79.904f, "Reactive non-metals", -7.2f, 58.8f, 1826),
+    new ElementData("Krypton", "Kr", 36, 83.798f, "Noble gases", -157.36f, -153.22f, 1898),
+    new ElementData("Rubidium", "Rb", 37, 85.468f, "Alkali metals", 39.31f, 688f, 1861),
+    new ElementData("Strontium", "Sr", 38, 87.62f, "Alkaline earth metals", 777f, 1382f, 1790),
+    new ElementData("Yttrium", "Y", 39, 88.906f, "Transition metals", 1526f, 3338f, 1794),
+    new ElementData("Zirconium", "Zr", 40, 91.224f, "Transition metals", 1855f, 4409f, 1789),
+    new ElementData("Niobium", "Nb", 41, 92.906f, "Transition metals", 2477f, 4744f, 1801),
+    new ElementData("Molybdenum", "Mo", 42, 95.95f, "Transition metals", 2623f, 4639f, 1778),
+    new ElementData("Technetium", "Tc", 43, 98f, "Transition metals", 2157f, 4265f, 1937),
+    new ElementData("Ruthenium", "Ru", 44, 101.07f, "Transition metals", 2334f, 4150f, 1844),
+    new ElementData("Rhodium", "Rh", 45, 102.91f, "Transition metals", 1964f, 3695f, 1803),
+    new ElementData("Palladium", "Pd", 46, 106.42f, "Transition metals", 1554.9f, 2963f, 1803),
+    new ElementData("Silver", "Ag", 47, 107.87f, "Transition metals", 961.78f, 2162f, -1),
+    new ElementData("Cadmium", "Cd", 48, 112.41f, "Transition metals", 321.07f, 767f, 1817),
+    new ElementData("Indium", "In", 49, 114.82f, "Post-transition metals", 156.6f, 2072f, 1863),
+    new ElementData("Tin", "Sn", 50, 118.71f, "Post-transition metals", 231.93f, 2602f, -1),
+    new ElementData("Antimony", "Sb", 51, 121.76f, "Metalloids", 630.63f, 1587f, -1),
+    new ElementData("Tellurium", "Te", 52, 127.6f, "Metalloids", 449.51f, 988f, 1782),
+    new ElementData("Iodine", "I", 53, 126.9f, "Reactive non-metals", 113.7f, 184.3f, 1811),
+    new ElementData("Xenon", "Xe", 54, 131.29f, "Noble gases", -111.8f, -108.1f, 1898),
+    new ElementData("Cesium", "Cs", 55, 132.91f, "Alkali metals", 28.44f, 671f, 1860),
+    new ElementData("Barium", "Ba", 56, 137.33f, "Alkaline earth metals", 727f, 1845f, 1808),
+    new ElementData("Lanthanum", "La", 57, 138.91f, "Lanthanides", 920f, 3464f, 1839),
+    new ElementData("Cerium", "Ce", 58, 140.12f, "Lanthanides", 798f, 3424f, 1803),
+    new ElementData("Praseodymium", "Pr", 59, 140.91f, "Lanthanides", 931f, 3290f, 1885),
+    new ElementData("Neodymium", "Nd", 60, 144.24f, "Lanthanides", 1024f, 3074f, 1885),
+    new ElementData("Promethium", "Pm", 61, 145f, "Lanthanides", 1100f, 3000f, 1945),
+    new ElementData("Samarium", "Sm", 62, 150.36f, "Lanthanides", 1072f, 1900f, 1879),
+    new ElementData("Europium", "Eu", 63, 151.96f, "Lanthanides", 822f, 1529f, 1901),
+    new ElementData("Gadolinium", "Gd", 64, 157.25f, "Lanthanides", 1312f, 3273f, 1880),
+    new ElementData("Terbium", "Tb", 65, 158.93f, "Lanthanides", 1356f, 3230f, 1843),
+    new ElementData("Dysprosium", "Dy", 66, 162.5f, "Lanthanides", 1412f, 2562f, 1886),
+    new ElementData("Holmium", "Ho", 67, 164.93f, "Lanthanides", 1474f, 2700f, 1878),
+    new ElementData("Erbium", "Er", 68, 167.26f, "Lanthanides", 1529f, 2868f, 1842),
+    new ElementData("Thulium", "Tm", 69, 168.93f, "Lanthanides", 1545f, 1950f, 1879),
+    new ElementData("Ytterbium", "Yb", 70, 173.04f, "Lanthanides", 824f, 1196f, 1878),
+    new ElementData("Lutetium", "Lu", 71, 174.97f, "Lanthanides", 1652f, 3402f, 1907),
+    new ElementData("Hafnium", "Hf", 72, 178.49f, "Transition metals", 2233f, 4603f, 1923),
+    new ElementData("Tantalum", "Ta", 73, 180.95f, "Transition metals", 3017f, 5458f, 1802),
+    new ElementData("Tungsten", "W", 74, 183.84f, "Transition metals", 3422f, 5555f, 1783),
+    new ElementData("Rhenium", "Re", 75, 186.21f, "Transition metals", 3186f, 5596f, 1925),
+    new ElementData("Osmium", "Os", 76, 190.23f, "Transition metals", 3033f, 5012f, 1803),
+    new ElementData("Iridium", "Ir", 77, 192.22f, "Transition metals", 2446f, 4130f, 1803),
+    new ElementData("Platinum", "Pt", 78, 195.08f, "Transition metals", 1768.3f, 3825f, -1),
+    new ElementData("Gold", "Au", 79, 196.97f, "Transition metals", 1064.18f, 2970f, -1),
+    new ElementData("Mercury", "Hg", 80, 200.59f, "Transition metals", -38.83f, 356.73f, -1),
+    new ElementData("Thallium", "Tl", 81, 204.38f, "Post-transition metals", 304f, 1473f, 1861),
+    new ElementData("Lead", "Pb", 82, 207.2f, "Post-transition metals", 327.46f, 1749f, -1),
+    new ElementData("Bismuth", "Bi", 83, 208.98f, "Post-transition metals", 271.3f, 1564f, -1),
+    new ElementData("Polonium", "Po", 84, 209f, "Post-transition metals", 254f, 962f, 1898),
+    new ElementData("Astatine", "At", 85, 210f, "Post-transition metals", 302f, 337f, 1940),
+    new ElementData("Radon", "Rn", 86, 222f, "Noble gases", -71f, -61.7f, 1900),
+    new ElementData("Francium", "Fr", 87, 223f, "Alkali metals", 27f, 677f, 1939),
+    new ElementData("Radium", "Ra", 88, 226f, "Alkaline earth metals", 700f, 1737f, 1898),
+    new ElementData("Actinium", "Ac", 89, 227f, "Actinides", 1050f, 3200f, 1899),
+    new ElementData("Thorium", "Th", 90, 232.04f, "Actinides", 1750f, 4788f, 1829),
+    new ElementData("Protactinium", "Pa", 91, 231.04f, "Actinides", 1568f, 4027f, 1913),
+    new ElementData("Uranium", "U", 92, 238.03f, "Actinides", 1132.2f, 4131f, 1789),
+    new ElementData("Neptunium", "Np", 93, 237f, "Actinides", 644f, 3902f, 1940),
+    new ElementData("Plutonium", "Pu", 94, 244f, "Actinides", 640f, 3228f, 1940),
+    new ElementData("Americium", "Am", 95, 243f, "Actinides", 1176f, 2607f, 1944),
+    new ElementData("Curium", "Cm", 96, 247f, "Actinides", 1340f, 3110f, 1944),
+    new ElementData("Berkelium", "Bk", 97, 247f, "Actinides", 986f, 2627f, 1949),
+    new ElementData("Californium", "Cf", 98, 251f, "Actinides", 900f, 1472f, 1950),
+    new ElementData("Einsteinium", "Es", 99, 252f, "Actinides", 860f, 996f, 1952),
+    new ElementData("Fermium", "Fm", 100, 257f, "Actinides", 1527f, -1f, 1952),
+    new ElementData("Mendelevium", "Md", 101, 258f, "Actinides", 827f, -1f, 1955),
+    new ElementData("Nobelium", "No", 102, 259f, "Actinides", 827f, -1f, 1966),
+    new ElementData("Lawrencium", "Lr", 103, 262f, "Actinides", 1627f, -1f, 1961),
+    new ElementData("Rutherfordium", "Rf", 104, 267f, "Transition metals", 2400f, 5800f, 1964),
+    new ElementData("Dubnium", "Db", 105, 270f, "Transition metals", 2573f, 5200f, 1967),
+    new ElementData("Seaborgium", "Sg", 106, 271f, "Transition metals", 2830f, 6200f, 1974),
+    new ElementData("Bohrium", "Bh", 107, 270f, "Transition metals", 2727f, 5800f, 1981),
+    new ElementData("Hassium", "Hs", 108, 277f, "Transition metals", 126f, 1740f, 1984),
+    new ElementData("Meitnerium", "Mt", 109, 278f, "Unknown properties", 0f, 0f, 1982),
+    new ElementData("Darmstadtium", "Ds", 110, 281f, "Unknown properties", 0f, 0f, 1994),
+    new ElementData("Roentgenium", "Rg", 111, 282f, "Unknown properties", 0f, 0f, 1994),
+    new ElementData("Copernicium", "Cn", 112, 285f, "Unknown properties", 0f, 0f, 1996),
+    new ElementData("Nihonium", "Nh", 113, 286f, "Unknown properties", 0f, 0f, 2003),
+    new ElementData("Flerovium", "Fl", 114, 289f, "Unknown properties", 0f, 0f, 1998),
+    new ElementData("Moscovium", "Mc", 115, 290f, "Unknown properties", 0f, 0f, 2003),
+    new ElementData("Livermorium", "Lv", 116, 293f, "Unknown properties", 0f, 0f, 2000),
+    new ElementData("Tennessine", "Ts", 117, 294f, "Unknown properties", 0f, 0f, 2010),
+    new ElementData("Oganesson", "Og", 118, 294f, "Unknown properties", 0f, 0f, 2002)
+};
+
 
     void BuildPeriodicTable()
     {
-        GameObject element = new GameObject();
         for (int i = 0; i < elementPrefabs.Count; i++)
         {
             int atomicNumber = i + 1;
-            Vector2 position = GetElementPosition(atomicNumber);
+            Vector2 position = GetPositionEL(atomicNumber);
+
+            GameObject element = Instantiate(elementPrefabs[i], periodicTableParent.transform);
             element.transform.localPosition = new Vector3(position.x * 100, position.y * -100, 0); // Adjust the spacing multiplier as needed
 
-            TextMeshProUGUI[] textBoxes = element.GetComponentsInChildren<TextMeshProUGUI>();
-            if (textBoxes.Length >= 3)
+            Element elementScript = element.GetComponent<Element>();
+            if (elementScript != null)
             {
-                textBoxes[0].text = atomicNumber.ToString();
-                textBoxes[1].text = GetElementSymbol(atomicNumber);
-                textBoxes[2].text = GetElementFullName(atomicNumber);
+                ElementData data = elementData[atomicNumber - 1];
+                elementScript.S_Name = element.transform.Find("S_Name").GetComponent<TMP_Text>();
+                elementScript.F_Name = element.transform.Find("F_Name").GetComponent<TMP_Text>();
+                elementScript.Number = element.transform.Find("Number").GetComponent<TMP_Text>();
+                elementScript.atomicMassText = element.transform.Find("atomicMassText").GetComponent<TMP_Text>();
+                elementScript.metalTypeText = element.transform.Find("metalTypeText").GetComponent<TMP_Text>();
+                elementScript.meltingPointText = element.transform.Find("meltingPointText").GetComponent<TMP_Text>();
+                elementScript.boilingPointText = element.transform.Find("boilingPointText").GetComponent<TMP_Text>();
+                elementScript.discoveryYearText = element.transform.Find("discoveryYearText").GetComponent<TMP_Text>();
+
+                elementScript.S_Name.text = data.symbol;
+                elementScript.F_Name.text = data.name;
+                elementScript.Number.text = data.atomicNumber.ToString();
+                elementScript.atomicMassText.text = "Mass: " + data.atomicMass.ToString();
+                elementScript.metalTypeText.text = "Metal Type: " + data.metalType;
+                elementScript.meltingPointText.text = "Melting Point: " + data.meltingPoint.ToString() + " °C";
+                elementScript.boilingPointText.text = "Boiling Point: " + data.boilingPoint.ToString() + " °C";
+                elementScript.discoveryYearText.text = "Discovery Year: " + data.discoveryYear.ToString();
             }
 
             AssignElementColor(element, elementTypes[atomicNumber - 1]);
         }
     }
+
+
 
     void AssignElementColor(GameObject element, string type)
     {
@@ -210,16 +351,6 @@ public class PeriodicTableLayout : MonoBehaviour
         }
 
         renderer.material.color = elementColor;
-    }
-
-    Vector2 GetElementPosition(int atomicNumber)
-    {
-        // Define your element positions based on their periodic table layout.
-        // Here's a basic structure; adjust it based on your table grid system.
-        if (atomicNumber == 1) return new Vector2(0, 0); // Example: Hydrogen
-        if (atomicNumber == 2) return new Vector2(17, 0); // Example: Helium
-        // Add more positioning logic here...
-        return new Vector2(atomicNumber % 18, atomicNumber / 18); // Example: Fill the table left to right.
     }
 
     string GetElementSymbol(int atomicNumber)
@@ -272,13 +403,13 @@ public class PeriodicTableLayout : MonoBehaviour
 
     void Start()
     {
-        //BuildPeriodicTable();
+        // BuildPeriodicTable();
         CompleteAndPositionElements();
     }
 
     void CompleteAndPositionElements()
     {
-        for (int atomicNumber = 1; atomicNumber <= totalElements; atomicNumber++)
+        for (int atomicNumber = 1; atomicNumber <= elementData.Length; atomicNumber++)
         {
             Transform elementTransform = GetElementTransform1(atomicNumber);
 
@@ -286,19 +417,52 @@ public class PeriodicTableLayout : MonoBehaviour
             if (elementTransform == null)
             {
                 GameObject newElement = Instantiate(elementPrefab, periodicTableParent.transform);
-                newElement.name = atomicNumber + "_" + GetElementName1(atomicNumber); // Name format: "1_Hydrogen"
-                newElement.GetComponent<Element>().S_Name.text = GetElementSymbol(atomicNumber);
-                newElement.GetComponent<Element>().F_Name.text = GetElementFullName(atomicNumber);
-                newElement.GetComponent<Element>().Number.text = atomicNumber.ToString();
+                newElement.name = atomicNumber + "_" + elementData[atomicNumber - 1].name; // Name format: "1_Hydrogen"
+                Element elementScript = newElement.GetComponent<Element>();
+
+                // Assign TMP_Text components programmatically
+                elementScript.S_Name = newElement.transform.Find("Element_text").GetComponent<TMP_Text>();
+                elementScript.F_Name = newElement.transform.Find("FullName").GetComponent<TMP_Text>();
+                elementScript.Number = newElement.transform.Find("Number").GetComponent<TMP_Text>();
+                elementScript.atomicMassText = newElement.transform.Find("AtomicMassText").GetComponent<TMP_Text>();
+                elementScript.metalTypeText = newElement.transform.Find("MetalTypeText").GetComponent<TMP_Text>();
+                elementScript.meltingPointText = newElement.transform.Find("MeltingPointText").GetComponent<TMP_Text>();
+                elementScript.boilingPointText = newElement.transform.Find("BoilingPointText").GetComponent<TMP_Text>();
+                elementScript.discoveryYearText = newElement.transform.Find("DiscoveryYearText").GetComponent<TMP_Text>();
+
+                // Set element data
+                ElementData data = elementData[atomicNumber - 1];
+                elementScript.symbol = data.symbol;
+                elementScript.fullName = data.name;
+                elementScript.atomicNumber = atomicNumber;
+                elementScript.atomicMass = data.atomicMass;
+                elementScript.metalType = data.metalType;
+                elementScript.meltingPoint = data.meltingPoint;
+                elementScript.boilingPoint = data.boilingPoint;
+                elementScript.discoveryYear = data.discoveryYear;
+
+                // Set TMP_Text values
+                elementScript.S_Name.text = data.symbol;
+                elementScript.F_Name.text = data.name;
+                elementScript.Number.text = data.atomicNumber.ToString();
+                elementScript.atomicMassText.text = "Mass: " + data.atomicMass.ToString();
+                elementScript.metalTypeText.text = "Metal Type: " + data.metalType;
+                elementScript.meltingPointText.text = "Melting Point: " + data.meltingPoint.ToString() + " °C";
+                elementScript.boilingPointText.text = "Boiling Point: " + data.boilingPoint.ToString() + " °C";
+                elementScript.discoveryYearText.text = "Discovery Year: " + data.discoveryYear.ToString();
+
                 AssignElementColor(newElement, elementTypes[atomicNumber - 1]);
 
                 elementTransform = newElement.transform;
             }
+
             // Position the element in the correct place
             Vector2 position = GetPositionEL(atomicNumber);
             elementTransform.localPosition = new Vector3(position.x * elementSize.x, -position.y * elementSize.y, 0);
         }
     }
+
+
 
     Transform GetElementTransform1(int atomicNumber)
     {
@@ -579,5 +743,28 @@ public class PeriodicTableLayout : MonoBehaviour
 
             default: return new Vector2(-1, -1); // Return an invalid position for elements outside range
         }
+    }
+}
+public class ElementData
+{
+    public string name;
+    public string symbol;
+    public int atomicNumber;
+    public float atomicMass;
+    public string metalType;
+    public float meltingPoint;
+    public float boilingPoint;
+    public int discoveryYear;
+
+    public ElementData(string name, string symbol, int atomicNumber, float atomicMass, string metalType, float meltingPoint, float boilingPoint, int discoveryYear)
+    {
+        this.name = name;
+        this.symbol = symbol;
+        this.atomicNumber = atomicNumber;
+        this.atomicMass = atomicMass;
+        this.metalType = metalType;
+        this.meltingPoint = meltingPoint;
+        this.boilingPoint = boilingPoint;
+        this.discoveryYear = discoveryYear;
     }
 }
