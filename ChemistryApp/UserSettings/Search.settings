@@ -9,6 +9,12 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+<<<<<<< HEAD
+=======
+	"last_search.66F56946" = "package man"
+	"OpenInspectorPreview.66F56946" = "0"
+	"currentGroup.66F56946" = "all"
+>>>>>>> Vencis_branch
 }
 providers = {
 	asset = {

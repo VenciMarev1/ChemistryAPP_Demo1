@@ -16,13 +16,13 @@ public class CreatingElementsLogic : MonoBehaviour
     Dictionary<string, Dictionary<int, int>> AtomDict; //Dictionary<name of the atom, Dictionary<electrons, index>
 
 
-    public TMP_InputField InputEquation;
+   // public TMP_InputField InputEquation;
 
     // Start is called before the first frame update
     void Start()
     {
         var se = new InputField.SubmitEvent();
-        InputEquation.onEndEdit.AddListener(SubmitRedox);
+      //  InputEquation.onEndEdit.AddListener(SubmitRedox);
 
 
         Atoms = new List<GameObject>();
@@ -278,7 +278,7 @@ public class CreatingElementsLogic : MonoBehaviour
         //:(
     }
 
-    //Zadyljitelno da se smenqt tezi listove sys elementite v ui-a.
+    //Zadyljitelno da se smenqt tezi listove sys elementite v ui-a. - Update: Ne si poznal, listovete da si stoqt.
 
 
     private void SubmitRedox(string arg0)
