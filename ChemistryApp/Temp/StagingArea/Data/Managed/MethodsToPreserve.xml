@@ -1,7 +1,0 @@
-<linker>
-	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
-		<type fullname="InstantiateAtom">
-			<method name="SolveChemEqation"/>
-		</type>
-	</assembly>
-</linker>

@@ -222,27 +222,48 @@ public class InstantiateAtom : MonoBehaviour
 
     private void SubmitRedox(string arg0)
     {
+
+
         char[] things = { ' ', '+' };
         string[] atoms = arg0.Split(things);
 
         List<string> FindAtoms = new List<string>();
         atoms_Script = new List<Atom>();
 
-        for (int i = 0; i < Metals.Count; i++)
-        {
-            string name = Metals[i].GetComponent<Atom>().Name;
-            if (atoms[0].Contains(name))
-            {
-                FindAtoms.Add(name);
-            }
-        }
-
         for (int i = 0; i < NonMetals.Count; i++)
         {
             string name = NonMetals[i].GetComponent<Atom>().Name;
             if (atoms[0].Contains(name))
             {
                 FindAtoms.Add(name);
+            }
+        }
+
+
+        
+        for (int i = 0; i < Metals.Count; i++)
+        {
+            string name = Metals[i].GetComponent<Atom>().Name;
+            if (atoms[0].Contains(name))
+            {
+                FindAtoms.Add(name);
+                if(FindAtoms[0] == "OH")
+                {
+                    FindAtoms.Remove("H");
+                }
+            }
+        }
+
+     
+       for (int i = 0; i < NonMetals.Count; i++)
+        {
+            string name = NonMetals[i].GetComponent<Atom>().Name;
+            for (int y = 1; y < atoms.Length; y++)
+            {
+                if (atoms[y].Contains(name))
+                {
+                    FindAtoms.Add(name);
+                }
             }
         }
 
@@ -258,19 +279,10 @@ public class InstantiateAtom : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < NonMetals.Count; i++)
-        {
-            string name = NonMetals[i].GetComponent<Atom>().Name;
-            for (int y = 1; y < atoms.Length; y++)
-            {
-                if (atoms[y].Contains(name))
-                {
-                    FindAtoms.Add(name);
-                }
-            }
-        }
+  
 
-        if (ROAM.IndexOf(FindAtoms[0]) > ROAM.IndexOf(FindAtoms[2]))
+
+        if (ROAM.IndexOf(FindAtoms[1]) > ROAM.IndexOf(FindAtoms[2]))
         {
             BalanceChemicalEquation(FindAtoms);
         }
@@ -310,8 +322,8 @@ public class InstantiateAtom : MonoBehaviour
     {
 
         // Update the text display with balanced equation
-        string a = SolveChemEqation(CheckElementsMetals(FindAtoms[0]), CheckElementsNonMetals(FindAtoms[1]));
-        string b = SolveChemEqation(CheckElementsMetals(FindAtoms[2]), CheckElementsNonMetals(FindAtoms[1]));
+        string a = SolveChemEqation(CheckElementsMetals(FindAtoms[1]), CheckElementsNonMetals(FindAtoms[0]));
+        string b = SolveChemEqation(CheckElementsMetals(FindAtoms[2]), CheckElementsNonMetals(FindAtoms[0]));
 
         // Get the electrons involved in the reaction
         int e1 = Math.Abs(atoms_Script[0].Electrons); // First metal electrons
@@ -340,7 +352,7 @@ public class InstantiateAtom : MonoBehaviour
 
     private void UpdateRedoxEquations(List<string> FindAtoms, List<Nullable<int>> coefficients)
     {
-        Atom RED = Metals[CheckElementsMetals(FindAtoms[0])].GetComponent<Atom>();
+        Atom RED = Metals[CheckElementsMetals(FindAtoms[1])].GetComponent<Atom>();
         Atom OX = Metals[CheckElementsMetals(FindAtoms[2])].GetComponent<Atom>();
 
 
