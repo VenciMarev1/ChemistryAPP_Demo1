@@ -2515,7 +2515,7 @@ PrefabInstance:
       objectReference: {fileID: 970517127}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: Metals.Array.size
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: Metals.Array.data[8]
@@ -2527,7 +2527,7 @@ PrefabInstance:
       objectReference: {fileID: 294551295855705161, guid: ebd2f16e805a04e488fdc1bcc7113af3, type: 3}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: NonMetals.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: Metals.Array.data[10]
@@ -2540,19 +2540,19 @@ PrefabInstance:
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: Metals.Array.data[12]
       value: 
-      objectReference: {fileID: 294551295855705161, guid: fe905d57ae8bb458aadaffb2e3756d2e, type: 3}
+      objectReference: {fileID: 2480191243880700778, guid: cf8afbb006a8540718d19feb78f4622d, type: 3}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: Metals.Array.data[13]
       value: 
-      objectReference: {fileID: 2480191243880700778, guid: c6073b3f3f90549acaa3e08c0c3f44a9, type: 3}
+      objectReference: {fileID: 294551295855705161, guid: fe905d57ae8bb458aadaffb2e3756d2e, type: 3}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: Metals.Array.data[14]
       value: 
-      objectReference: {fileID: 294551295855705161, guid: 5495c0d198a0c4550b23f297fcd66d40, type: 3}
+      objectReference: {fileID: 2480191243880700778, guid: c6073b3f3f90549acaa3e08c0c3f44a9, type: 3}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: Metals.Array.data[15]
       value: 
-      objectReference: {fileID: 2480191243880700778, guid: df01d03c482894087a952878c996ffd6, type: 3}
+      objectReference: {fileID: 294551295855705161, guid: 5495c0d198a0c4550b23f297fcd66d40, type: 3}
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: Metals.Array.data[16]
       value: 
@@ -2588,7 +2588,7 @@ PrefabInstance:
     - target: {fileID: 7639916165121259265, guid: 14bcd1c3eca77421081b827343886fe9, type: 3}
       propertyPath: NonMetals.Array.data[7]
       value: 
-      objectReference: {fileID: 4411559597765776328, guid: 387c0fb1854544a288d1b1233b7bc8bc, type: 3}
+      objectReference: {fileID: 4411559597765776328, guid: 162df7807846e43bf98fec64741c317e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1258,4 +1258,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/vencimarev/Documents/GitHub/RedoxMaster/Calculator Module
+  playerPath: /Users/vencimarev/Desktop/Calculator Module

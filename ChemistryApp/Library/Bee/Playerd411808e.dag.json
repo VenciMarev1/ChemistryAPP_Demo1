@@ -19906,7 +19906,6 @@
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.js",
         "Library/Bee/artifacts/csharpactions/build.framework.js_mumr.info",
-        "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/.DS_Store",
         "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/modules.asset",
         "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
@@ -20010,7 +20009,6 @@
         "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/BuildTools/data/unity_default_resources",
         "Temp/StagingArea/Data/Resources/unity_builtin_extra",
         "Library/Bee/artifacts/csharpactions/webgl.data_qnm2.info",
-        "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/.DS_Store",
         "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/modules.asset",
         "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "/Applications/Unity/Hub/Editor/2022.3.54f1/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",

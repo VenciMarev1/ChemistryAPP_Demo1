@@ -105,7 +105,7 @@ public class InstantiateAtom : MonoBehaviour
     private string DisplayElement(Dictionary<string, Dictionary<int, int>> AtomDict, List<Atom> pNames)
     {
         string Text = null;
-        List<string> ElementsWithIndex = new List<string>() { "OH", "SO", "SO4", "NO" };
+        List<string> ElementsWithIndex = new List<string>() { "OH", "SO3", "SO4", "NO3" };
         List<string> names = new List<string>();
 
         foreach (var a in AtomDict)
